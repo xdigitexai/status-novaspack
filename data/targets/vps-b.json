@@ -1,35 +1,35 @@
 {
     "id": "vps-b",
     "type": "vps",
-    "checked_at": 1794620589,
-    "duration_ms": 7458,
+    "checked_at": 1794620890,
+    "duration_ms": 7266,
     "reachable": true,
     "error": null,
     "metrics": {
         "hostname": "vmi3427589",
         "os": "Ubuntu 24.04.4 LTS",
         "kernel": "6.8.0-147-generic",
-        "uptime": "up 4 days, 9 hours, 52 minutes",
-        "uptime_raw": "02:43:11 up 4 days,  9:52,  1 user,  load average: 0.21, 0.59, 0.78",
-        "load1": 0.21,
-        "load5": 0.59,
-        "load15": 0.78,
+        "uptime": "up 4 days, 9 hours, 57 minutes",
+        "uptime_raw": "02:48:12 up 4 days,  9:57,  1 user,  load average: 0.93, 0.67, 0.76",
+        "load1": 0.93,
+        "load5": 0.67,
+        "load15": 0.76,
         "cpus": 4,
-        "load_pct": 5.3,
+        "load_pct": 23.3,
         "mem_total_kb": 8131768,
-        "mem_used_kb": 2784140,
-        "mem_free_kb": 3638460,
-        "mem_pct": 34.2,
+        "mem_used_kb": 2714468,
+        "mem_free_kb": 3707600,
+        "mem_pct": 33.4,
         "disk_fs": "/dev/sda1",
         "disk_size_kb": 151263856,
-        "disk_used_kb": 35137712,
-        "disk_avail_kb": 116109760,
+        "disk_used_kb": 35137852,
+        "disk_avail_kb": 116109620,
         "disk_pct": 24,
         "php_cli": "",
         "php_cli_ver": "",
         "whoami": "root",
         "home": "",
-        "procs": "710 711856",
+        "procs": "709 712407",
         "queue_pending": "0",
         "queue_failed": "72",
         "queue_inflight": "0",
@@ -174,14 +174,14 @@
             "http": {
                 "deriv.makamescopay.com": {
                     "status": 200,
-                    "ms": 37,
+                    "ms": 116,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 65
                 }
             },
             "status": 200,
-            "ms": 37,
+            "ms": 116,
             "scheme": "https",
             "http_error": "",
             "up": true
@@ -204,14 +204,14 @@
             "http": {
                 "host.makamesco-tech.co.ke": {
                     "status": 405,
-                    "ms": 151,
+                    "ms": 144,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 36
                 }
             },
             "status": 405,
-            "ms": 151,
+            "ms": 144,
             "scheme": "https",
             "http_error": "",
             "up": false
@@ -264,14 +264,14 @@
             "http": {
                 "mpesa.makamescopay.com": {
                     "status": 200,
-                    "ms": 37,
+                    "ms": 119,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 37
                 }
             },
             "status": 200,
-            "ms": 37,
+            "ms": 119,
             "scheme": "https",
             "http_error": "",
             "up": true
@@ -294,14 +294,14 @@
             "http": {
                 "app.makamescopay.com": {
                     "status": 200,
-                    "ms": 24,
+                    "ms": 29,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 82
                 }
             },
             "status": 200,
-            "ms": 24,
+            "ms": 29,
             "scheme": "https",
             "http_error": "",
             "up": true
@@ -324,14 +324,14 @@
             "http": {
                 "panel.makamesco-tech.co.ke": {
                     "status": 200,
-                    "ms": 83,
+                    "ms": 81,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 36
                 }
             },
             "status": 200,
-            "ms": 83,
+            "ms": 81,
             "scheme": "https",
             "http_error": "",
             "up": true
@@ -356,21 +356,21 @@
             "http": {
                 "sendmoney.co.ke": {
                     "status": 404,
-                    "ms": 64,
+                    "ms": 110,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 38
                 },
                 "www.sendmoney.co.ke": {
                     "status": 404,
-                    "ms": 81,
+                    "ms": 114,
                     "scheme": "https",
                     "error": "",
                     "tls_days": 38
                 }
             },
             "status": 404,
-            "ms": 64,
+            "ms": 110,
             "scheme": "https",
             "http_error": "",
             "up": false
@@ -378,18 +378,23 @@
     ],
     "procs": [
         {
-            "cpu": 38,
+            "cpu": 300,
+            "mem": 0,
+            "cmd": "ps"
+        },
+        {
+            "cpu": 22.7,
             "mem": 0,
             "cmd": "bash"
         },
         {
-            "cpu": 24,
+            "cpu": 18.4,
             "mem": 0.1,
             "cmd": "systemd"
         },
         {
             "cpu": 13.7,
-            "mem": 2,
+            "mem": 1,
             "cmd": "wings"
         },
         {
@@ -401,11 +406,6 @@
             "cpu": 5.1,
             "mem": 0.6,
             "cmd": "containerd"
-        },
-        {
-            "cpu": 4.8,
-            "mem": 0.1,
-            "cmd": "sshd"
         }
     ],
     "memprocs": [
@@ -415,7 +415,7 @@
             "cmd": "/opt/makak"
         }
     ],
-    "sites_probed_at": 1794620598,
-    "last_good_at": 1794620589,
+    "sites_probed_at": 1794620898,
+    "last_good_at": 1794620890,
     "stale": false
 }

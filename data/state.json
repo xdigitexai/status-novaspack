@@ -3,35 +3,35 @@
         "vps-a": {
             "id": "vps-a",
             "type": "vps",
-            "checked_at": 1794620830,
-            "duration_ms": 3331,
+            "checked_at": 1794620950,
+            "duration_ms": 3033,
             "reachable": true,
             "error": null,
             "metrics": {
                 "hostname": "platform.novaspack.com",
                 "os": "Ubuntu 24.04.5 LTS",
                 "kernel": "6.8.0-142-generic",
-                "uptime": "up 3 weeks, 1 day, 15 hours, 45 minutes",
-                "uptime_raw": "02:47:10 up 22 days, 15:45,  5 users,  load average: 3.60, 4.33, 5.54",
-                "load1": 3.6,
-                "load5": 4.33,
-                "load15": 5.54,
+                "uptime": "up 3 weeks, 1 day, 15 hours, 47 minutes",
+                "uptime_raw": "02:49:10 up 22 days, 15:47,  5 users,  load average: 4.75, 4.35, 5.39",
+                "load1": 4.75,
+                "load5": 4.35,
+                "load15": 5.39,
                 "cpus": 8,
-                "load_pct": 45,
+                "load_pct": 59.4,
                 "mem_total_kb": 24608572,
-                "mem_used_kb": 15618588,
-                "mem_free_kb": 914048,
-                "mem_pct": 63.5,
+                "mem_used_kb": 15750852,
+                "mem_free_kb": 885160,
+                "mem_pct": 64,
                 "disk_fs": "/dev/sda1",
                 "disk_size_kb": 303624428,
-                "disk_used_kb": 216203820,
-                "disk_avail_kb": 87404224,
+                "disk_used_kb": 216208576,
+                "disk_avail_kb": 87399468,
                 "disk_pct": 72,
                 "php_cli": "",
                 "php_cli_ver": "",
                 "whoami": "www-data",
                 "home": "",
-                "procs": "4643 3215008",
+                "procs": "4646 3220644",
                 "queue_pending": "0",
                 "queue_failed": "8",
                 "queue_inflight": "0",
@@ -82,21 +82,21 @@
                     "http": {
                         "ad-plus.novaspack.com": {
                             "status": 200,
-                            "ms": 261,
+                            "ms": 227,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 41
                         },
                         "getadpulse.site": {
                             "status": 200,
-                            "ms": 243,
+                            "ms": 220,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 88
                         }
                     },
                     "status": 200,
-                    "ms": 261,
+                    "ms": 227,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -119,14 +119,14 @@
                     "http": {
                         "ads.novaspack.com": {
                             "status": 200,
-                            "ms": 149,
+                            "ms": 181,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 49
                         }
                     },
                     "status": 200,
-                    "ms": 149,
+                    "ms": 181,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -151,21 +151,21 @@
                     "http": {
                         "ambitioushub.store": {
                             "status": 200,
-                            "ms": 18,
+                            "ms": 24,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 49
                         },
                         "www.ambitioushub.store": {
                             "status": 200,
-                            "ms": 20,
+                            "ms": 14,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 49
                         }
                     },
                     "status": 200,
-                    "ms": 18,
+                    "ms": 24,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -188,14 +188,14 @@
                     "http": {
                         "charity.tdctech.org": {
                             "status": 200,
-                            "ms": 23,
+                            "ms": 27,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 88
                         }
                     },
                     "status": 200,
-                    "ms": 23,
+                    "ms": 27,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -218,14 +218,14 @@
                     "http": {
                         "fx.novaspack.com": {
                             "status": 200,
-                            "ms": 139,
+                            "ms": 135,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 43
                         }
                     },
                     "status": 200,
-                    "ms": 139,
+                    "ms": 135,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -251,28 +251,28 @@
                     "http": {
                         "lipa-hub.site": {
                             "status": 200,
-                            "ms": 62,
+                            "ms": 54,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 77
                         },
                         "www.lipa-hub.site": {
                             "status": 200,
-                            "ms": 35,
+                            "ms": 99,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 77
                         },
                         "lipahub.yurochat.site": {
                             "status": 301,
-                            "ms": 4,
+                            "ms": 8,
                             "scheme": "http",
                             "error": "",
                             "tls_days": null
                         }
                     },
                     "status": 200,
-                    "ms": 62,
+                    "ms": 54,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -295,14 +295,14 @@
                     "http": {
                         "marketx.xdigitex.com": {
                             "status": 200,
-                            "ms": 44,
+                            "ms": 58,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 86
                         }
                     },
                     "status": 200,
-                    "ms": 44,
+                    "ms": 58,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -325,14 +325,14 @@
                     "http": {
                         "mt5.novaspack.com": {
                             "status": 200,
-                            "ms": 59,
+                            "ms": 150,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 50
                         }
                     },
                     "status": 200,
-                    "ms": 59,
+                    "ms": 150,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -355,14 +355,14 @@
                     "http": {
                         "netx.xdigitex.com": {
                             "status": 200,
-                            "ms": 15,
+                            "ms": 23,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 89
                         }
                     },
                     "status": 200,
-                    "ms": 15,
+                    "ms": 23,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -385,14 +385,14 @@
                     "http": {
                         "news.xdigitex.com": {
                             "status": 200,
-                            "ms": 141,
+                            "ms": 140,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 80
                         }
                     },
                     "status": 200,
-                    "ms": 141,
+                    "ms": 140,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -417,21 +417,21 @@
                     "http": {
                         "ogzensmm.online": {
                             "status": 200,
-                            "ms": 58,
+                            "ms": 72,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 59
                         },
                         "www.ogzensmm.online": {
                             "status": 200,
-                            "ms": 59,
+                            "ms": 76,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 59
                         }
                     },
                     "status": 200,
-                    "ms": 58,
+                    "ms": 72,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -454,14 +454,14 @@
                     "http": {
                         "panel.novaspack.com": {
                             "status": 200,
-                            "ms": 141,
+                            "ms": 88,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 41
                         }
                     },
                     "status": 200,
-                    "ms": 141,
+                    "ms": 88,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -484,14 +484,14 @@
                     "http": {
                         "pay.xdigitex.com": {
                             "status": 200,
-                            "ms": 15,
+                            "ms": 11,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 81
                         }
                     },
                     "status": 200,
-                    "ms": 15,
+                    "ms": 11,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -514,14 +514,14 @@
                     "http": {
                         "platform.novaspack.com": {
                             "status": 200,
-                            "ms": 14,
+                            "ms": 10,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 41
                         }
                     },
                     "status": 200,
-                    "ms": 14,
+                    "ms": 10,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -544,14 +544,14 @@
                     "http": {
                         "prime.novaspack.com": {
                             "status": 501,
-                            "ms": 27,
+                            "ms": 187,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 43
                         }
                     },
                     "status": 501,
-                    "ms": 27,
+                    "ms": 187,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -574,14 +574,14 @@
                     "http": {
                         "proxy.xdigitex.com": {
                             "status": 404,
-                            "ms": 21,
+                            "ms": 17,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 64
                         }
                     },
                     "status": 404,
-                    "ms": 21,
+                    "ms": 17,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -604,14 +604,14 @@
                     "http": {
                         "security.novaspack.com": {
                             "status": 307,
-                            "ms": 309,
+                            "ms": 222,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 46
                         }
                     },
                     "status": 307,
-                    "ms": 309,
+                    "ms": 222,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -634,14 +634,14 @@
                     "http": {
                         "security.xdigitex.com": {
                             "status": 200,
-                            "ms": 74,
+                            "ms": 85,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 88
                         }
                     },
                     "status": 200,
-                    "ms": 74,
+                    "ms": 85,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -664,14 +664,14 @@
                     "http": {
                         "status.novaspack.com": {
                             "status": 401,
-                            "ms": 192,
+                            "ms": 33,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 42
                         }
                     },
                     "status": 401,
-                    "ms": 192,
+                    "ms": 33,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -694,14 +694,14 @@
                     "http": {
                         "tdc-tech.novaspack.com": {
                             "status": 200,
-                            "ms": 25,
+                            "ms": 170,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 44
                         }
                     },
                     "status": 200,
-                    "ms": 25,
+                    "ms": 170,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -726,21 +726,21 @@
                     "http": {
                         "tdctech.org": {
                             "status": 200,
-                            "ms": 21,
+                            "ms": 27,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 45
                         },
                         "www.tdctech.org": {
                             "status": 200,
-                            "ms": 15,
+                            "ms": 29,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 45
                         }
                     },
                     "status": 200,
-                    "ms": 21,
+                    "ms": 27,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -763,14 +763,14 @@
                     "http": {
                         "video-studio.novaspack.com": {
                             "status": 200,
-                            "ms": 106,
+                            "ms": 186,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 44
                         }
                     },
                     "status": 200,
-                    "ms": 106,
+                    "ms": 186,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -792,14 +792,14 @@
                     "http": {
                         "video.xdigitex.com": {
                             "status": 502,
-                            "ms": 12,
+                            "ms": 10,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 87
                         }
                     },
                     "status": 502,
-                    "ms": 12,
+                    "ms": 10,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -821,14 +821,14 @@
                     "http": {
                         "video.xdigitex.com": {
                             "status": 502,
-                            "ms": 12,
+                            "ms": 10,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 87
                         }
                     },
                     "status": 502,
-                    "ms": 12,
+                    "ms": 10,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -851,14 +851,14 @@
                     "http": {
                         "vm.novaspack.com": {
                             "status": 200,
-                            "ms": 21,
+                            "ms": 196,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 41
                         }
                     },
                     "status": 200,
-                    "ms": 21,
+                    "ms": 196,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -881,14 +881,14 @@
                     "http": {
                         "wantam.novaspack.com": {
                             "status": 200,
-                            "ms": 121,
+                            "ms": 130,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 51
                         }
                     },
                     "status": 200,
-                    "ms": 121,
+                    "ms": 130,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -941,14 +941,14 @@
                     "http": {
                         "mail.xdigitex.com": {
                             "status": 200,
-                            "ms": 36,
+                            "ms": 59,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 56
                         }
                     },
                     "status": 200,
-                    "ms": 36,
+                    "ms": 59,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -975,28 +975,28 @@
                     "http": {
                         "yurichat.xdigitex.com": {
                             "status": 200,
-                            "ms": 25,
+                            "ms": 24,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 73
                         },
                         "yurochat.site": {
                             "status": 200,
-                            "ms": 25,
+                            "ms": 19,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 73
                         },
                         "www.yurochat.site": {
                             "status": 301,
-                            "ms": 25,
+                            "ms": 23,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 73
                         }
                     },
                     "status": 200,
-                    "ms": 25,
+                    "ms": 24,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1019,14 +1019,14 @@
                     "http": {
                         "yurochat.xdigitex.com": {
                             "status": 200,
-                            "ms": 16,
+                            "ms": 18,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 73
                         }
                     },
                     "status": 200,
-                    "ms": 16,
+                    "ms": 18,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1034,73 +1034,73 @@
             ],
             "procs": [
                 {
-                    "cpu": 27.7,
+                    "cpu": 36.8,
                     "mem": 0.1,
                     "cmd": "php8.3"
                 },
                 {
-                    "cpu": 27,
-                    "mem": 0.3,
-                    "cmd": "postgres"
-                },
-                {
-                    "cpu": 26.9,
+                    "cpu": 25,
                     "mem": 0.1,
                     "cmd": "php"
                 },
                 {
-                    "cpu": 25.3,
+                    "cpu": 24.5,
                     "mem": 12.3,
                     "cmd": "java"
                 },
                 {
-                    "cpu": 23.3,
-                    "mem": 1.9,
+                    "cpu": 23.2,
+                    "mem": 1.8,
                     "cmd": "node"
                 },
                 {
+                    "cpu": 22.4,
+                    "mem": 0.4,
+                    "cmd": "postgres"
+                },
+                {
                     "cpu": 18.1,
-                    "mem": 3.2,
+                    "mem": 4,
                     "cmd": "node"
                 }
             ],
             "memprocs": [],
-            "sites_probed_at": 1794620837,
-            "last_good_at": 1794620830,
+            "sites_probed_at": 1794620957,
+            "last_good_at": 1794620950,
             "stale": false
         },
         "vps-b": {
             "id": "vps-b",
             "type": "vps",
-            "checked_at": 1794620589,
-            "duration_ms": 7458,
+            "checked_at": 1794620890,
+            "duration_ms": 7266,
             "reachable": true,
             "error": null,
             "metrics": {
                 "hostname": "vmi3427589",
                 "os": "Ubuntu 24.04.4 LTS",
                 "kernel": "6.8.0-147-generic",
-                "uptime": "up 4 days, 9 hours, 52 minutes",
-                "uptime_raw": "02:43:11 up 4 days,  9:52,  1 user,  load average: 0.21, 0.59, 0.78",
-                "load1": 0.21,
-                "load5": 0.59,
-                "load15": 0.78,
+                "uptime": "up 4 days, 9 hours, 57 minutes",
+                "uptime_raw": "02:48:12 up 4 days,  9:57,  1 user,  load average: 0.93, 0.67, 0.76",
+                "load1": 0.93,
+                "load5": 0.67,
+                "load15": 0.76,
                 "cpus": 4,
-                "load_pct": 5.3,
+                "load_pct": 23.3,
                 "mem_total_kb": 8131768,
-                "mem_used_kb": 2784140,
-                "mem_free_kb": 3638460,
-                "mem_pct": 34.2,
+                "mem_used_kb": 2714468,
+                "mem_free_kb": 3707600,
+                "mem_pct": 33.4,
                 "disk_fs": "/dev/sda1",
                 "disk_size_kb": 151263856,
-                "disk_used_kb": 35137712,
-                "disk_avail_kb": 116109760,
+                "disk_used_kb": 35137852,
+                "disk_avail_kb": 116109620,
                 "disk_pct": 24,
                 "php_cli": "",
                 "php_cli_ver": "",
                 "whoami": "root",
                 "home": "",
-                "procs": "710 711856",
+                "procs": "709 712407",
                 "queue_pending": "0",
                 "queue_failed": "72",
                 "queue_inflight": "0",
@@ -1245,14 +1245,14 @@
                     "http": {
                         "deriv.makamescopay.com": {
                             "status": 200,
-                            "ms": 37,
+                            "ms": 116,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 65
                         }
                     },
                     "status": 200,
-                    "ms": 37,
+                    "ms": 116,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1275,14 +1275,14 @@
                     "http": {
                         "host.makamesco-tech.co.ke": {
                             "status": 405,
-                            "ms": 151,
+                            "ms": 144,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 36
                         }
                     },
                     "status": 405,
-                    "ms": 151,
+                    "ms": 144,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -1335,14 +1335,14 @@
                     "http": {
                         "mpesa.makamescopay.com": {
                             "status": 200,
-                            "ms": 37,
+                            "ms": 119,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 37
                         }
                     },
                     "status": 200,
-                    "ms": 37,
+                    "ms": 119,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1365,14 +1365,14 @@
                     "http": {
                         "app.makamescopay.com": {
                             "status": 200,
-                            "ms": 24,
+                            "ms": 29,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 82
                         }
                     },
                     "status": 200,
-                    "ms": 24,
+                    "ms": 29,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1395,14 +1395,14 @@
                     "http": {
                         "panel.makamesco-tech.co.ke": {
                             "status": 200,
-                            "ms": 83,
+                            "ms": 81,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 36
                         }
                     },
                     "status": 200,
-                    "ms": 83,
+                    "ms": 81,
                     "scheme": "https",
                     "http_error": "",
                     "up": true
@@ -1427,21 +1427,21 @@
                     "http": {
                         "sendmoney.co.ke": {
                             "status": 404,
-                            "ms": 64,
+                            "ms": 110,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 38
                         },
                         "www.sendmoney.co.ke": {
                             "status": 404,
-                            "ms": 81,
+                            "ms": 114,
                             "scheme": "https",
                             "error": "",
                             "tls_days": 38
                         }
                     },
                     "status": 404,
-                    "ms": 64,
+                    "ms": 110,
                     "scheme": "https",
                     "http_error": "",
                     "up": false
@@ -1449,18 +1449,23 @@
             ],
             "procs": [
                 {
-                    "cpu": 38,
+                    "cpu": 300,
+                    "mem": 0,
+                    "cmd": "ps"
+                },
+                {
+                    "cpu": 22.7,
                     "mem": 0,
                     "cmd": "bash"
                 },
                 {
-                    "cpu": 24,
+                    "cpu": 18.4,
                     "mem": 0.1,
                     "cmd": "systemd"
                 },
                 {
                     "cpu": 13.7,
-                    "mem": 2,
+                    "mem": 1,
                     "cmd": "wings"
                 },
                 {
@@ -1472,11 +1477,6 @@
                     "cpu": 5.1,
                     "mem": 0.6,
                     "cmd": "containerd"
-                },
-                {
-                    "cpu": 4.8,
-                    "mem": 0.1,
-                    "cmd": "sshd"
                 }
             ],
             "memprocs": [
@@ -1486,8 +1486,8 @@
                     "cmd": "/opt/makak"
                 }
             ],
-            "sites_probed_at": 1794620598,
-            "last_good_at": 1794620589,
+            "sites_probed_at": 1794620898,
+            "last_good_at": 1794620890,
             "stale": false
         },
         "cpanel-a": {
@@ -3495,7 +3495,7 @@
             "sites_probed_at": 0
         }
     },
-    "updated_at": 1794620837,
+    "updated_at": 1794620957,
     "collector": {
         "ran": true,
         "refreshed": [
