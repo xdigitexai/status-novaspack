@@ -1,0 +1,1069 @@
+{
+    "id": "vps-a",
+    "type": "vps",
+    "checked_at": 1794620830,
+    "duration_ms": 3331,
+    "reachable": true,
+    "error": null,
+    "metrics": {
+        "hostname": "platform.novaspack.com",
+        "os": "Ubuntu 24.04.5 LTS",
+        "kernel": "6.8.0-142-generic",
+        "uptime": "up 3 weeks, 1 day, 15 hours, 45 minutes",
+        "uptime_raw": "02:47:10 up 22 days, 15:45,  5 users,  load average: 3.60, 4.33, 5.54",
+        "load1": 3.6,
+        "load5": 4.33,
+        "load15": 5.54,
+        "cpus": 8,
+        "load_pct": 45,
+        "mem_total_kb": 24608572,
+        "mem_used_kb": 15618588,
+        "mem_free_kb": 914048,
+        "mem_pct": 63.5,
+        "disk_fs": "/dev/sda1",
+        "disk_size_kb": 303624428,
+        "disk_used_kb": 216203820,
+        "disk_avail_kb": 87404224,
+        "disk_pct": 72,
+        "php_cli": "",
+        "php_cli_ver": "",
+        "whoami": "www-data",
+        "home": "",
+        "procs": "4643 3215008",
+        "queue_pending": "0",
+        "queue_failed": "8",
+        "queue_inflight": "0",
+        "queue_note": "",
+        "ptero_present": 1,
+        "docker_present": 1,
+        "docker_running": 0,
+        "docker_total": 0,
+        "docker_unhealthy": 0,
+        "docker_stopped": 0,
+        "pm2_present": 1
+    },
+    "units": {
+        "docker": "active/running/enabled",
+        "containerd": "active/running/enabled",
+        "nginx": "active/running/enabled",
+        "mariadb": "active/running/enabled",
+        "redis-server": "active/running/enabled",
+        "wings": "active/running/enabled",
+        "pteroq": "active/running/enabled"
+    },
+    "containers": [],
+    "pm2": {
+        "present": true,
+        "total": 0,
+        "online": 0,
+        "stopped": 0,
+        "procs": []
+    },
+    "sites": [
+        {
+            "id": "ad-plus.novaspack.com",
+            "hosts": [
+                "ad-plus.novaspack.com",
+                "getadpulse.site",
+                "ad-plus.novaspack.com",
+                "getadpulse.site"
+            ],
+            "server_names": "ad-plus.novaspack.com getadpulse.site ad-plus.novaspack.com getadpulse.site",
+            "owner": "nginx:ad-plus.novaspack.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:3011",
+            "cert_epoch": null,
+            "cert_days": 41,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "ad-plus.novaspack.com": {
+                    "status": 200,
+                    "ms": 261,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 41
+                },
+                "getadpulse.site": {
+                    "status": 200,
+                    "ms": 243,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 88
+                }
+            },
+            "status": 200,
+            "ms": 261,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "ads.novaspack.com",
+            "hosts": [
+                "ads.novaspack.com",
+                "ads.novaspack.com"
+            ],
+            "server_names": "ads.novaspack.com ads.novaspack.com",
+            "owner": "nginx:ads.novaspack.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:3008",
+            "cert_epoch": null,
+            "cert_days": 49,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "ads.novaspack.com": {
+                    "status": 200,
+                    "ms": 149,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 49
+                }
+            },
+            "status": 200,
+            "ms": 149,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "ambitioushub.store",
+            "hosts": [
+                "ambitioushub.store",
+                "www.ambitioushub.store",
+                "ambitioushub.store",
+                "www.ambitioushub.store"
+            ],
+            "server_names": "ambitioushub.store www.ambitioushub.store ambitioushub.store www.ambitioushub.store",
+            "owner": "nginx:ambitioushub.store",
+            "root": "/var/www/ambitioushub.store",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 49,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "ambitioushub.store": {
+                    "status": 200,
+                    "ms": 18,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 49
+                },
+                "www.ambitioushub.store": {
+                    "status": 200,
+                    "ms": 20,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 49
+                }
+            },
+            "status": 200,
+            "ms": 18,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "charity.tdctech.org",
+            "hosts": [
+                "charity.tdctech.org",
+                "charity.tdctech.org"
+            ],
+            "server_names": "charity.tdctech.org charity.tdctech.org",
+            "owner": "nginx:charity.tdctech.org",
+            "root": "/var/www/charity.tdctech.org",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 88,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "charity.tdctech.org": {
+                    "status": 200,
+                    "ms": 23,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 88
+                }
+            },
+            "status": 200,
+            "ms": 23,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "fx.novaspack.com",
+            "hosts": [
+                "fx.novaspack.com",
+                "fx.novaspack.com"
+            ],
+            "server_names": "fx.novaspack.com fx.novaspack.com",
+            "owner": "nginx:fx.novaspack.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:5012",
+            "cert_epoch": null,
+            "cert_days": 43,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "fx.novaspack.com": {
+                    "status": 200,
+                    "ms": 139,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 43
+                }
+            },
+            "status": 200,
+            "ms": 139,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "lipa-hub.site",
+            "hosts": [
+                "lipa-hub.site",
+                "www.lipa-hub.site",
+                "lipahub.yurochat.site",
+                "lipa-hub.site",
+                "www.lipa-hub.site"
+            ],
+            "server_names": "lipa-hub.site www.lipa-hub.site lipahub.yurochat.site lipa-hub.site www.lipa-hub.site",
+            "owner": "nginx:lipahub.yurochat.site",
+            "root": "/var/www/lipahub/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 77,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "lipa-hub.site": {
+                    "status": 200,
+                    "ms": 62,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 77
+                },
+                "www.lipa-hub.site": {
+                    "status": 200,
+                    "ms": 35,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 77
+                },
+                "lipahub.yurochat.site": {
+                    "status": 301,
+                    "ms": 4,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 62,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "marketx.xdigitex.com",
+            "hosts": [
+                "marketx.xdigitex.com",
+                "marketx.xdigitex.com"
+            ],
+            "server_names": "marketx.xdigitex.com marketx.xdigitex.com",
+            "owner": "nginx:marketx.xdigitex.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:4100",
+            "cert_epoch": null,
+            "cert_days": 86,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "marketx.xdigitex.com": {
+                    "status": 200,
+                    "ms": 44,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 86
+                }
+            },
+            "status": 200,
+            "ms": 44,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mt5.novaspack.com",
+            "hosts": [
+                "mt5.novaspack.com",
+                "mt5.novaspack.com"
+            ],
+            "server_names": "mt5.novaspack.com mt5.novaspack.com",
+            "owner": "nginx:mt5.novaspack.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:5022",
+            "cert_epoch": null,
+            "cert_days": 50,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "mt5.novaspack.com": {
+                    "status": 200,
+                    "ms": 59,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 50
+                }
+            },
+            "status": 200,
+            "ms": 59,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "netx.xdigitex.com",
+            "hosts": [
+                "netx.xdigitex.com",
+                "netx.xdigitex.com"
+            ],
+            "server_names": "netx.xdigitex.com netx.xdigitex.com",
+            "owner": "nginx:netx.xdigitex.com",
+            "root": "/var/www/netx-downloads",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 89,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "netx.xdigitex.com": {
+                    "status": 200,
+                    "ms": 15,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 89
+                }
+            },
+            "status": 200,
+            "ms": 15,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "news.xdigitex.com",
+            "hosts": [
+                "news.xdigitex.com",
+                "news.xdigitex.com"
+            ],
+            "server_names": "news.xdigitex.com news.xdigitex.com",
+            "owner": "nginx:news.xdigitex.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:3018",
+            "cert_epoch": null,
+            "cert_days": 80,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "news.xdigitex.com": {
+                    "status": 200,
+                    "ms": 141,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 80
+                }
+            },
+            "status": 200,
+            "ms": 141,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "ogzensmm.online",
+            "hosts": [
+                "ogzensmm.online",
+                "www.ogzensmm.online",
+                "ogzensmm.online",
+                "www.ogzensmm.online"
+            ],
+            "server_names": "ogzensmm.online www.ogzensmm.online ogzensmm.online www.ogzensmm.online",
+            "owner": "nginx:ogzensmm.online",
+            "root": "/var/www/ogzensmm.online",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 59,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "ogzensmm.online": {
+                    "status": 200,
+                    "ms": 58,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 59
+                },
+                "www.ogzensmm.online": {
+                    "status": 200,
+                    "ms": 59,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 59
+                }
+            },
+            "status": 200,
+            "ms": 58,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "panel.novaspack.com",
+            "hosts": [
+                "panel.novaspack.com",
+                "panel.novaspack.com"
+            ],
+            "server_names": "panel.novaspack.com panel.novaspack.com",
+            "owner": "nginx:panel.novaspack.com",
+            "root": "/var/www/pterodactyl/public",
+            "proxy": "https://127.0.0.1:2022",
+            "cert_epoch": null,
+            "cert_days": 41,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "panel.novaspack.com": {
+                    "status": 200,
+                    "ms": 141,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 41
+                }
+            },
+            "status": 200,
+            "ms": 141,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "pay.xdigitex.com",
+            "hosts": [
+                "pay.xdigitex.com",
+                "pay.xdigitex.com"
+            ],
+            "server_names": "pay.xdigitex.com pay.xdigitex.com",
+            "owner": "nginx:pay-xdigitex",
+            "root": "/opt/xdigitex-pay/portal/public",
+            "proxy": "http://127.0.0.1:2543",
+            "cert_epoch": null,
+            "cert_days": 81,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "pay.xdigitex.com": {
+                    "status": 200,
+                    "ms": 15,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 81
+                }
+            },
+            "status": 200,
+            "ms": 15,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "platform.novaspack.com",
+            "hosts": [
+                "platform.novaspack.com",
+                "platform.novaspack.com"
+            ],
+            "server_names": "platform.novaspack.com platform.novaspack.com",
+            "owner": "nginx:platform.novaspack.com",
+            "root": "/var/www/platform.novaspack.com",
+            "proxy": "http://127.0.0.1:8787/",
+            "cert_epoch": null,
+            "cert_days": 41,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "platform.novaspack.com": {
+                    "status": 200,
+                    "ms": 14,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 41
+                }
+            },
+            "status": 200,
+            "ms": 14,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "prime.novaspack.com",
+            "hosts": [
+                "prime.novaspack.com",
+                "prime.novaspack.com"
+            ],
+            "server_names": "prime.novaspack.com prime.novaspack.com",
+            "owner": "nginx:prime.novaspack.com",
+            "root": "/var/www/prime-acme",
+            "proxy": "http://127.0.0.1:8090",
+            "cert_epoch": null,
+            "cert_days": 43,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "prime.novaspack.com": {
+                    "status": 501,
+                    "ms": 27,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 43
+                }
+            },
+            "status": 501,
+            "ms": 27,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "proxy.xdigitex.com",
+            "hosts": [
+                "proxy.xdigitex.com",
+                "proxy.xdigitex.com"
+            ],
+            "server_names": "proxy.xdigitex.com proxy.xdigitex.com",
+            "owner": "nginx:proxy.xdigitex.com",
+            "root": "/var/www/proxy.xdigitex.com/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 64,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "proxy.xdigitex.com": {
+                    "status": 404,
+                    "ms": 21,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 64
+                }
+            },
+            "status": 404,
+            "ms": 21,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "security.novaspack.com",
+            "hosts": [
+                "security.novaspack.com",
+                "security.novaspack.com"
+            ],
+            "server_names": "security.novaspack.com security.novaspack.com",
+            "owner": "nginx:security.novaspack.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:3000",
+            "cert_epoch": null,
+            "cert_days": 46,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "security.novaspack.com": {
+                    "status": 307,
+                    "ms": 309,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 46
+                }
+            },
+            "status": 307,
+            "ms": 309,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "security.xdigitex.com",
+            "hosts": [
+                "security.xdigitex.com",
+                "security.xdigitex.com"
+            ],
+            "server_names": "security.xdigitex.com security.xdigitex.com",
+            "owner": "nginx:security.xdigitex.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:8083",
+            "cert_epoch": null,
+            "cert_days": 88,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "security.xdigitex.com": {
+                    "status": 200,
+                    "ms": 74,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 88
+                }
+            },
+            "status": 200,
+            "ms": 74,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "status.novaspack.com",
+            "hosts": [
+                "status.novaspack.com",
+                "status.novaspack.com"
+            ],
+            "server_names": "status.novaspack.com status.novaspack.com",
+            "owner": "nginx:status.novaspack.com",
+            "root": "/var/www/status.novaspack.com/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 42,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "status.novaspack.com": {
+                    "status": 401,
+                    "ms": 192,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 42
+                }
+            },
+            "status": 401,
+            "ms": 192,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "tdc-tech.novaspack.com",
+            "hosts": [
+                "tdc-tech.novaspack.com",
+                "tdc-tech.novaspack.com"
+            ],
+            "server_names": "tdc-tech.novaspack.com tdc-tech.novaspack.com",
+            "owner": "nginx:tdc-tech.novaspack.com",
+            "root": "/var/www/tdc-tech.novaspack.com/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 44,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "tdc-tech.novaspack.com": {
+                    "status": 200,
+                    "ms": 25,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 44
+                }
+            },
+            "status": 200,
+            "ms": 25,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "tdctech.org",
+            "hosts": [
+                "tdctech.org",
+                "www.tdctech.org",
+                "tdctech.org",
+                "www.tdctech.org"
+            ],
+            "server_names": "tdctech.org www.tdctech.org tdctech.org www.tdctech.org",
+            "owner": "nginx:tdctech.org",
+            "root": "/var/www/tdc-tech.novaspack.com/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 45,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "tdctech.org": {
+                    "status": 200,
+                    "ms": 21,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 45
+                },
+                "www.tdctech.org": {
+                    "status": 200,
+                    "ms": 15,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 45
+                }
+            },
+            "status": 200,
+            "ms": 21,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "video-studio.novaspack.com",
+            "hosts": [
+                "video-studio.novaspack.com",
+                "video-studio.novaspack.com"
+            ],
+            "server_names": "video-studio.novaspack.com video-studio.novaspack.com",
+            "owner": "nginx:video-studio.novaspack.com",
+            "root": "/var/www/video-studio-acme",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 44,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "video-studio.novaspack.com": {
+                    "status": 200,
+                    "ms": 106,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 44
+                }
+            },
+            "status": 200,
+            "ms": 106,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "video.xdigitex.com",
+            "hosts": [
+                "video.xdigitex.com"
+            ],
+            "server_names": "video.xdigitex.com",
+            "owner": "nginx:videox",
+            "root": "/var/www/videox-acme",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "video.xdigitex.com": {
+                    "status": 502,
+                    "ms": 12,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 502,
+            "ms": 12,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "video.xdigitex.com",
+            "hosts": [
+                "video.xdigitex.com"
+            ],
+            "server_names": "video.xdigitex.com",
+            "owner": "nginx:videox-ssl",
+            "root": "",
+            "proxy": "http://127.0.0.1:8890",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "video.xdigitex.com": {
+                    "status": 502,
+                    "ms": 12,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 502,
+            "ms": 12,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "vm.novaspack.com",
+            "hosts": [
+                "vm.novaspack.com",
+                "vm.novaspack.com"
+            ],
+            "server_names": "vm.novaspack.com vm.novaspack.com",
+            "owner": "nginx:vm.novaspack.com",
+            "root": "/var/www/vm.novaspack.com/apps/web/dist",
+            "proxy": "http://127.0.0.1:4011",
+            "cert_epoch": null,
+            "cert_days": 41,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "vm.novaspack.com": {
+                    "status": 200,
+                    "ms": 21,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 41
+                }
+            },
+            "status": 200,
+            "ms": 21,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "wantam.novaspack.com",
+            "hosts": [
+                "wantam.novaspack.com",
+                "wantam.novaspack.com"
+            ],
+            "server_names": "wantam.novaspack.com wantam.novaspack.com",
+            "owner": "nginx:wantam.novaspack.com",
+            "root": "/var/www/wantam.novaspack.com/public",
+            "proxy": "http://127.0.0.1:3015",
+            "cert_epoch": null,
+            "cert_days": 51,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "wantam.novaspack.com": {
+                    "status": 200,
+                    "ms": 121,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 51
+                }
+            },
+            "status": 200,
+            "ms": 121,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "watch.xdigitex.com",
+            "hosts": [
+                "watch.xdigitex.com",
+                "watch.xdigitex.com"
+            ],
+            "server_names": "watch.xdigitex.com watch.xdigitex.com",
+            "owner": "nginx:watch.xdigitex.com",
+            "root": "",
+            "proxy": "http://127.0.0.1:4110",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "watch.xdigitex.com": {
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 37,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mail.xdigitex.com",
+            "hosts": [
+                "mail.xdigitex.com",
+                "mail.xdigitex.com"
+            ],
+            "server_names": "mail.xdigitex.com mail.xdigitex.com",
+            "owner": "nginx:xdigitex-mail",
+            "root": "",
+            "proxy": "http://127.0.0.1:18861",
+            "cert_epoch": null,
+            "cert_days": 56,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "mail.xdigitex.com": {
+                    "status": 200,
+                    "ms": 36,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 56
+                }
+            },
+            "status": 200,
+            "ms": 36,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "yurichat.xdigitex.com",
+            "hosts": [
+                "yurichat.xdigitex.com",
+                "yurochat.site",
+                "www.yurochat.site",
+                "yurichat.xdigitex.com",
+                "yurochat.site",
+                "www.yurochat.site"
+            ],
+            "server_names": "yurichat.xdigitex.com yurochat.site www.yurochat.site yurichat.xdigitex.com yurochat.site www.yurochat.site",
+            "owner": "nginx:yurichat.xdigitex.com",
+            "root": "/var/www/yurichat",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 73,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "yurichat.xdigitex.com": {
+                    "status": 200,
+                    "ms": 25,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 73
+                },
+                "yurochat.site": {
+                    "status": 200,
+                    "ms": 25,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 73
+                },
+                "www.yurochat.site": {
+                    "status": 301,
+                    "ms": 25,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 73
+                }
+            },
+            "status": 200,
+            "ms": 25,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "yurochat.xdigitex.com",
+            "hosts": [
+                "yurochat.xdigitex.com",
+                "yurochat.xdigitex.com"
+            ],
+            "server_names": "yurochat.xdigitex.com yurochat.xdigitex.com",
+            "owner": "nginx:yurochat.xdigitex.com.conf",
+            "root": "/var/www/yurochat.xdigitex.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 73,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "yurochat.xdigitex.com": {
+                    "status": 200,
+                    "ms": 16,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 73
+                }
+            },
+            "status": 200,
+            "ms": 16,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        }
+    ],
+    "procs": [
+        {
+            "cpu": 27.7,
+            "mem": 0.1,
+            "cmd": "php8.3"
+        },
+        {
+            "cpu": 27,
+            "mem": 0.3,
+            "cmd": "postgres"
+        },
+        {
+            "cpu": 26.9,
+            "mem": 0.1,
+            "cmd": "php"
+        },
+        {
+            "cpu": 25.3,
+            "mem": 12.3,
+            "cmd": "java"
+        },
+        {
+            "cpu": 23.3,
+            "mem": 1.9,
+            "cmd": "node"
+        },
+        {
+            "cpu": 18.1,
+            "mem": 3.2,
+            "cmd": "node"
+        }
+    ],
+    "memprocs": [],
+    "sites_probed_at": 1794620837,
+    "last_good_at": 1794620830,
+    "stale": false
+}

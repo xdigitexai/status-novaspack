@@ -1,0 +1,16 @@
+{
+    "id": "cpanel-b",
+    "type": "cpanel",
+    "checked_at": 1794620409,
+    "duration_ms": 1494,
+    "reachable": false,
+    "error": "gbsbklvy@66.29.137.179: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "metrics": [],
+    "units": [],
+    "containers": [],
+    "pm2": [],
+    "sites": [],
+    "procs": [],
+    "memprocs": [],
+    "sites_probed_at": 0
+}

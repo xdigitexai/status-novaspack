@@ -1,0 +1,3506 @@
+{
+    "targets": {
+        "vps-a": {
+            "id": "vps-a",
+            "type": "vps",
+            "checked_at": 1794620830,
+            "duration_ms": 3331,
+            "reachable": true,
+            "error": null,
+            "metrics": {
+                "hostname": "platform.novaspack.com",
+                "os": "Ubuntu 24.04.5 LTS",
+                "kernel": "6.8.0-142-generic",
+                "uptime": "up 3 weeks, 1 day, 15 hours, 45 minutes",
+                "uptime_raw": "02:47:10 up 22 days, 15:45,  5 users,  load average: 3.60, 4.33, 5.54",
+                "load1": 3.6,
+                "load5": 4.33,
+                "load15": 5.54,
+                "cpus": 8,
+                "load_pct": 45,
+                "mem_total_kb": 24608572,
+                "mem_used_kb": 15618588,
+                "mem_free_kb": 914048,
+                "mem_pct": 63.5,
+                "disk_fs": "/dev/sda1",
+                "disk_size_kb": 303624428,
+                "disk_used_kb": 216203820,
+                "disk_avail_kb": 87404224,
+                "disk_pct": 72,
+                "php_cli": "",
+                "php_cli_ver": "",
+                "whoami": "www-data",
+                "home": "",
+                "procs": "4643 3215008",
+                "queue_pending": "0",
+                "queue_failed": "8",
+                "queue_inflight": "0",
+                "queue_note": "",
+                "ptero_present": 1,
+                "docker_present": 1,
+                "docker_running": 0,
+                "docker_total": 0,
+                "docker_unhealthy": 0,
+                "docker_stopped": 0,
+                "pm2_present": 1
+            },
+            "units": {
+                "docker": "active/running/enabled",
+                "containerd": "active/running/enabled",
+                "nginx": "active/running/enabled",
+                "mariadb": "active/running/enabled",
+                "redis-server": "active/running/enabled",
+                "wings": "active/running/enabled",
+                "pteroq": "active/running/enabled"
+            },
+            "containers": [],
+            "pm2": {
+                "present": true,
+                "total": 0,
+                "online": 0,
+                "stopped": 0,
+                "procs": []
+            },
+            "sites": [
+                {
+                    "id": "ad-plus.novaspack.com",
+                    "hosts": [
+                        "ad-plus.novaspack.com",
+                        "getadpulse.site",
+                        "ad-plus.novaspack.com",
+                        "getadpulse.site"
+                    ],
+                    "server_names": "ad-plus.novaspack.com getadpulse.site ad-plus.novaspack.com getadpulse.site",
+                    "owner": "nginx:ad-plus.novaspack.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:3011",
+                    "cert_epoch": null,
+                    "cert_days": 41,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "ad-plus.novaspack.com": {
+                            "status": 200,
+                            "ms": 261,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 41
+                        },
+                        "getadpulse.site": {
+                            "status": 200,
+                            "ms": 243,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 88
+                        }
+                    },
+                    "status": 200,
+                    "ms": 261,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "ads.novaspack.com",
+                    "hosts": [
+                        "ads.novaspack.com",
+                        "ads.novaspack.com"
+                    ],
+                    "server_names": "ads.novaspack.com ads.novaspack.com",
+                    "owner": "nginx:ads.novaspack.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:3008",
+                    "cert_epoch": null,
+                    "cert_days": 49,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "ads.novaspack.com": {
+                            "status": 200,
+                            "ms": 149,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 49
+                        }
+                    },
+                    "status": 200,
+                    "ms": 149,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "ambitioushub.store",
+                    "hosts": [
+                        "ambitioushub.store",
+                        "www.ambitioushub.store",
+                        "ambitioushub.store",
+                        "www.ambitioushub.store"
+                    ],
+                    "server_names": "ambitioushub.store www.ambitioushub.store ambitioushub.store www.ambitioushub.store",
+                    "owner": "nginx:ambitioushub.store",
+                    "root": "/var/www/ambitioushub.store",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 49,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "ambitioushub.store": {
+                            "status": 200,
+                            "ms": 18,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 49
+                        },
+                        "www.ambitioushub.store": {
+                            "status": 200,
+                            "ms": 20,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 49
+                        }
+                    },
+                    "status": 200,
+                    "ms": 18,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "charity.tdctech.org",
+                    "hosts": [
+                        "charity.tdctech.org",
+                        "charity.tdctech.org"
+                    ],
+                    "server_names": "charity.tdctech.org charity.tdctech.org",
+                    "owner": "nginx:charity.tdctech.org",
+                    "root": "/var/www/charity.tdctech.org",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 88,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "charity.tdctech.org": {
+                            "status": 200,
+                            "ms": 23,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 88
+                        }
+                    },
+                    "status": 200,
+                    "ms": 23,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "fx.novaspack.com",
+                    "hosts": [
+                        "fx.novaspack.com",
+                        "fx.novaspack.com"
+                    ],
+                    "server_names": "fx.novaspack.com fx.novaspack.com",
+                    "owner": "nginx:fx.novaspack.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:5012",
+                    "cert_epoch": null,
+                    "cert_days": 43,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "fx.novaspack.com": {
+                            "status": 200,
+                            "ms": 139,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 43
+                        }
+                    },
+                    "status": 200,
+                    "ms": 139,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "lipa-hub.site",
+                    "hosts": [
+                        "lipa-hub.site",
+                        "www.lipa-hub.site",
+                        "lipahub.yurochat.site",
+                        "lipa-hub.site",
+                        "www.lipa-hub.site"
+                    ],
+                    "server_names": "lipa-hub.site www.lipa-hub.site lipahub.yurochat.site lipa-hub.site www.lipa-hub.site",
+                    "owner": "nginx:lipahub.yurochat.site",
+                    "root": "/var/www/lipahub/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 77,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "lipa-hub.site": {
+                            "status": 200,
+                            "ms": 62,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 77
+                        },
+                        "www.lipa-hub.site": {
+                            "status": 200,
+                            "ms": 35,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 77
+                        },
+                        "lipahub.yurochat.site": {
+                            "status": 301,
+                            "ms": 4,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 62,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "marketx.xdigitex.com",
+                    "hosts": [
+                        "marketx.xdigitex.com",
+                        "marketx.xdigitex.com"
+                    ],
+                    "server_names": "marketx.xdigitex.com marketx.xdigitex.com",
+                    "owner": "nginx:marketx.xdigitex.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:4100",
+                    "cert_epoch": null,
+                    "cert_days": 86,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "marketx.xdigitex.com": {
+                            "status": 200,
+                            "ms": 44,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 86
+                        }
+                    },
+                    "status": 200,
+                    "ms": 44,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mt5.novaspack.com",
+                    "hosts": [
+                        "mt5.novaspack.com",
+                        "mt5.novaspack.com"
+                    ],
+                    "server_names": "mt5.novaspack.com mt5.novaspack.com",
+                    "owner": "nginx:mt5.novaspack.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:5022",
+                    "cert_epoch": null,
+                    "cert_days": 50,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "mt5.novaspack.com": {
+                            "status": 200,
+                            "ms": 59,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 50
+                        }
+                    },
+                    "status": 200,
+                    "ms": 59,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "netx.xdigitex.com",
+                    "hosts": [
+                        "netx.xdigitex.com",
+                        "netx.xdigitex.com"
+                    ],
+                    "server_names": "netx.xdigitex.com netx.xdigitex.com",
+                    "owner": "nginx:netx.xdigitex.com",
+                    "root": "/var/www/netx-downloads",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 89,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "netx.xdigitex.com": {
+                            "status": 200,
+                            "ms": 15,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 89
+                        }
+                    },
+                    "status": 200,
+                    "ms": 15,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "news.xdigitex.com",
+                    "hosts": [
+                        "news.xdigitex.com",
+                        "news.xdigitex.com"
+                    ],
+                    "server_names": "news.xdigitex.com news.xdigitex.com",
+                    "owner": "nginx:news.xdigitex.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:3018",
+                    "cert_epoch": null,
+                    "cert_days": 80,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "news.xdigitex.com": {
+                            "status": 200,
+                            "ms": 141,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 80
+                        }
+                    },
+                    "status": 200,
+                    "ms": 141,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "ogzensmm.online",
+                    "hosts": [
+                        "ogzensmm.online",
+                        "www.ogzensmm.online",
+                        "ogzensmm.online",
+                        "www.ogzensmm.online"
+                    ],
+                    "server_names": "ogzensmm.online www.ogzensmm.online ogzensmm.online www.ogzensmm.online",
+                    "owner": "nginx:ogzensmm.online",
+                    "root": "/var/www/ogzensmm.online",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 59,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "ogzensmm.online": {
+                            "status": 200,
+                            "ms": 58,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 59
+                        },
+                        "www.ogzensmm.online": {
+                            "status": 200,
+                            "ms": 59,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 59
+                        }
+                    },
+                    "status": 200,
+                    "ms": 58,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "panel.novaspack.com",
+                    "hosts": [
+                        "panel.novaspack.com",
+                        "panel.novaspack.com"
+                    ],
+                    "server_names": "panel.novaspack.com panel.novaspack.com",
+                    "owner": "nginx:panel.novaspack.com",
+                    "root": "/var/www/pterodactyl/public",
+                    "proxy": "https://127.0.0.1:2022",
+                    "cert_epoch": null,
+                    "cert_days": 41,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "panel.novaspack.com": {
+                            "status": 200,
+                            "ms": 141,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 41
+                        }
+                    },
+                    "status": 200,
+                    "ms": 141,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "pay.xdigitex.com",
+                    "hosts": [
+                        "pay.xdigitex.com",
+                        "pay.xdigitex.com"
+                    ],
+                    "server_names": "pay.xdigitex.com pay.xdigitex.com",
+                    "owner": "nginx:pay-xdigitex",
+                    "root": "/opt/xdigitex-pay/portal/public",
+                    "proxy": "http://127.0.0.1:2543",
+                    "cert_epoch": null,
+                    "cert_days": 81,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "pay.xdigitex.com": {
+                            "status": 200,
+                            "ms": 15,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 81
+                        }
+                    },
+                    "status": 200,
+                    "ms": 15,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "platform.novaspack.com",
+                    "hosts": [
+                        "platform.novaspack.com",
+                        "platform.novaspack.com"
+                    ],
+                    "server_names": "platform.novaspack.com platform.novaspack.com",
+                    "owner": "nginx:platform.novaspack.com",
+                    "root": "/var/www/platform.novaspack.com",
+                    "proxy": "http://127.0.0.1:8787/",
+                    "cert_epoch": null,
+                    "cert_days": 41,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "platform.novaspack.com": {
+                            "status": 200,
+                            "ms": 14,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 41
+                        }
+                    },
+                    "status": 200,
+                    "ms": 14,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "prime.novaspack.com",
+                    "hosts": [
+                        "prime.novaspack.com",
+                        "prime.novaspack.com"
+                    ],
+                    "server_names": "prime.novaspack.com prime.novaspack.com",
+                    "owner": "nginx:prime.novaspack.com",
+                    "root": "/var/www/prime-acme",
+                    "proxy": "http://127.0.0.1:8090",
+                    "cert_epoch": null,
+                    "cert_days": 43,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "prime.novaspack.com": {
+                            "status": 501,
+                            "ms": 27,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 43
+                        }
+                    },
+                    "status": 501,
+                    "ms": 27,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "proxy.xdigitex.com",
+                    "hosts": [
+                        "proxy.xdigitex.com",
+                        "proxy.xdigitex.com"
+                    ],
+                    "server_names": "proxy.xdigitex.com proxy.xdigitex.com",
+                    "owner": "nginx:proxy.xdigitex.com",
+                    "root": "/var/www/proxy.xdigitex.com/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 64,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "proxy.xdigitex.com": {
+                            "status": 404,
+                            "ms": 21,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 64
+                        }
+                    },
+                    "status": 404,
+                    "ms": 21,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "security.novaspack.com",
+                    "hosts": [
+                        "security.novaspack.com",
+                        "security.novaspack.com"
+                    ],
+                    "server_names": "security.novaspack.com security.novaspack.com",
+                    "owner": "nginx:security.novaspack.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:3000",
+                    "cert_epoch": null,
+                    "cert_days": 46,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "security.novaspack.com": {
+                            "status": 307,
+                            "ms": 309,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 46
+                        }
+                    },
+                    "status": 307,
+                    "ms": 309,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "security.xdigitex.com",
+                    "hosts": [
+                        "security.xdigitex.com",
+                        "security.xdigitex.com"
+                    ],
+                    "server_names": "security.xdigitex.com security.xdigitex.com",
+                    "owner": "nginx:security.xdigitex.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:8083",
+                    "cert_epoch": null,
+                    "cert_days": 88,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "security.xdigitex.com": {
+                            "status": 200,
+                            "ms": 74,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 88
+                        }
+                    },
+                    "status": 200,
+                    "ms": 74,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "status.novaspack.com",
+                    "hosts": [
+                        "status.novaspack.com",
+                        "status.novaspack.com"
+                    ],
+                    "server_names": "status.novaspack.com status.novaspack.com",
+                    "owner": "nginx:status.novaspack.com",
+                    "root": "/var/www/status.novaspack.com/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 42,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "status.novaspack.com": {
+                            "status": 401,
+                            "ms": 192,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 42
+                        }
+                    },
+                    "status": 401,
+                    "ms": 192,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "tdc-tech.novaspack.com",
+                    "hosts": [
+                        "tdc-tech.novaspack.com",
+                        "tdc-tech.novaspack.com"
+                    ],
+                    "server_names": "tdc-tech.novaspack.com tdc-tech.novaspack.com",
+                    "owner": "nginx:tdc-tech.novaspack.com",
+                    "root": "/var/www/tdc-tech.novaspack.com/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 44,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "tdc-tech.novaspack.com": {
+                            "status": 200,
+                            "ms": 25,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 44
+                        }
+                    },
+                    "status": 200,
+                    "ms": 25,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "tdctech.org",
+                    "hosts": [
+                        "tdctech.org",
+                        "www.tdctech.org",
+                        "tdctech.org",
+                        "www.tdctech.org"
+                    ],
+                    "server_names": "tdctech.org www.tdctech.org tdctech.org www.tdctech.org",
+                    "owner": "nginx:tdctech.org",
+                    "root": "/var/www/tdc-tech.novaspack.com/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 45,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "tdctech.org": {
+                            "status": 200,
+                            "ms": 21,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 45
+                        },
+                        "www.tdctech.org": {
+                            "status": 200,
+                            "ms": 15,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 45
+                        }
+                    },
+                    "status": 200,
+                    "ms": 21,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "video-studio.novaspack.com",
+                    "hosts": [
+                        "video-studio.novaspack.com",
+                        "video-studio.novaspack.com"
+                    ],
+                    "server_names": "video-studio.novaspack.com video-studio.novaspack.com",
+                    "owner": "nginx:video-studio.novaspack.com",
+                    "root": "/var/www/video-studio-acme",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 44,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "video-studio.novaspack.com": {
+                            "status": 200,
+                            "ms": 106,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 44
+                        }
+                    },
+                    "status": 200,
+                    "ms": 106,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "video.xdigitex.com",
+                    "hosts": [
+                        "video.xdigitex.com"
+                    ],
+                    "server_names": "video.xdigitex.com",
+                    "owner": "nginx:videox",
+                    "root": "/var/www/videox-acme",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "video.xdigitex.com": {
+                            "status": 502,
+                            "ms": 12,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 502,
+                    "ms": 12,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "video.xdigitex.com",
+                    "hosts": [
+                        "video.xdigitex.com"
+                    ],
+                    "server_names": "video.xdigitex.com",
+                    "owner": "nginx:videox-ssl",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:8890",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "video.xdigitex.com": {
+                            "status": 502,
+                            "ms": 12,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 502,
+                    "ms": 12,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "vm.novaspack.com",
+                    "hosts": [
+                        "vm.novaspack.com",
+                        "vm.novaspack.com"
+                    ],
+                    "server_names": "vm.novaspack.com vm.novaspack.com",
+                    "owner": "nginx:vm.novaspack.com",
+                    "root": "/var/www/vm.novaspack.com/apps/web/dist",
+                    "proxy": "http://127.0.0.1:4011",
+                    "cert_epoch": null,
+                    "cert_days": 41,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "vm.novaspack.com": {
+                            "status": 200,
+                            "ms": 21,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 41
+                        }
+                    },
+                    "status": 200,
+                    "ms": 21,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "wantam.novaspack.com",
+                    "hosts": [
+                        "wantam.novaspack.com",
+                        "wantam.novaspack.com"
+                    ],
+                    "server_names": "wantam.novaspack.com wantam.novaspack.com",
+                    "owner": "nginx:wantam.novaspack.com",
+                    "root": "/var/www/wantam.novaspack.com/public",
+                    "proxy": "http://127.0.0.1:3015",
+                    "cert_epoch": null,
+                    "cert_days": 51,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "wantam.novaspack.com": {
+                            "status": 200,
+                            "ms": 121,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 51
+                        }
+                    },
+                    "status": 200,
+                    "ms": 121,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "watch.xdigitex.com",
+                    "hosts": [
+                        "watch.xdigitex.com",
+                        "watch.xdigitex.com"
+                    ],
+                    "server_names": "watch.xdigitex.com watch.xdigitex.com",
+                    "owner": "nginx:watch.xdigitex.com",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:4110",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "watch.xdigitex.com": {
+                            "status": 200,
+                            "ms": 37,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mail.xdigitex.com",
+                    "hosts": [
+                        "mail.xdigitex.com",
+                        "mail.xdigitex.com"
+                    ],
+                    "server_names": "mail.xdigitex.com mail.xdigitex.com",
+                    "owner": "nginx:xdigitex-mail",
+                    "root": "",
+                    "proxy": "http://127.0.0.1:18861",
+                    "cert_epoch": null,
+                    "cert_days": 56,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "mail.xdigitex.com": {
+                            "status": 200,
+                            "ms": 36,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 56
+                        }
+                    },
+                    "status": 200,
+                    "ms": 36,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "yurichat.xdigitex.com",
+                    "hosts": [
+                        "yurichat.xdigitex.com",
+                        "yurochat.site",
+                        "www.yurochat.site",
+                        "yurichat.xdigitex.com",
+                        "yurochat.site",
+                        "www.yurochat.site"
+                    ],
+                    "server_names": "yurichat.xdigitex.com yurochat.site www.yurochat.site yurichat.xdigitex.com yurochat.site www.yurochat.site",
+                    "owner": "nginx:yurichat.xdigitex.com",
+                    "root": "/var/www/yurichat",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 73,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "yurichat.xdigitex.com": {
+                            "status": 200,
+                            "ms": 25,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 73
+                        },
+                        "yurochat.site": {
+                            "status": 200,
+                            "ms": 25,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 73
+                        },
+                        "www.yurochat.site": {
+                            "status": 301,
+                            "ms": 25,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 73
+                        }
+                    },
+                    "status": 200,
+                    "ms": 25,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "yurochat.xdigitex.com",
+                    "hosts": [
+                        "yurochat.xdigitex.com",
+                        "yurochat.xdigitex.com"
+                    ],
+                    "server_names": "yurochat.xdigitex.com yurochat.xdigitex.com",
+                    "owner": "nginx:yurochat.xdigitex.com.conf",
+                    "root": "/var/www/yurochat.xdigitex.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 73,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "yurochat.xdigitex.com": {
+                            "status": 200,
+                            "ms": 16,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 73
+                        }
+                    },
+                    "status": 200,
+                    "ms": 16,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                }
+            ],
+            "procs": [
+                {
+                    "cpu": 27.7,
+                    "mem": 0.1,
+                    "cmd": "php8.3"
+                },
+                {
+                    "cpu": 27,
+                    "mem": 0.3,
+                    "cmd": "postgres"
+                },
+                {
+                    "cpu": 26.9,
+                    "mem": 0.1,
+                    "cmd": "php"
+                },
+                {
+                    "cpu": 25.3,
+                    "mem": 12.3,
+                    "cmd": "java"
+                },
+                {
+                    "cpu": 23.3,
+                    "mem": 1.9,
+                    "cmd": "node"
+                },
+                {
+                    "cpu": 18.1,
+                    "mem": 3.2,
+                    "cmd": "node"
+                }
+            ],
+            "memprocs": [],
+            "sites_probed_at": 1794620837,
+            "last_good_at": 1794620830,
+            "stale": false
+        },
+        "vps-b": {
+            "id": "vps-b",
+            "type": "vps",
+            "checked_at": 1794620589,
+            "duration_ms": 7458,
+            "reachable": true,
+            "error": null,
+            "metrics": {
+                "hostname": "vmi3427589",
+                "os": "Ubuntu 24.04.4 LTS",
+                "kernel": "6.8.0-147-generic",
+                "uptime": "up 4 days, 9 hours, 52 minutes",
+                "uptime_raw": "02:43:11 up 4 days,  9:52,  1 user,  load average: 0.21, 0.59, 0.78",
+                "load1": 0.21,
+                "load5": 0.59,
+                "load15": 0.78,
+                "cpus": 4,
+                "load_pct": 5.3,
+                "mem_total_kb": 8131768,
+                "mem_used_kb": 2784140,
+                "mem_free_kb": 3638460,
+                "mem_pct": 34.2,
+                "disk_fs": "/dev/sda1",
+                "disk_size_kb": 151263856,
+                "disk_used_kb": 35137712,
+                "disk_avail_kb": 116109760,
+                "disk_pct": 24,
+                "php_cli": "",
+                "php_cli_ver": "",
+                "whoami": "root",
+                "home": "",
+                "procs": "710 711856",
+                "queue_pending": "0",
+                "queue_failed": "72",
+                "queue_inflight": "0",
+                "queue_note": "",
+                "ptero_present": 1,
+                "docker_present": 1,
+                "docker_running": 7,
+                "docker_total": 13,
+                "docker_unhealthy": 0,
+                "docker_stopped": 6,
+                "pm2_present": 1
+            },
+            "units": {
+                "docker": "active/running/enabled",
+                "containerd": "active/running/enabled",
+                "nginx": "active/running/enabled",
+                "mariadb": "active/running/enabled",
+                "redis-server": "active/running/enabled",
+                "wings": "active/running/enabled",
+                "pteroq": "active/running/enabled"
+            },
+            "containers": [
+                {
+                    "name": "c55c97da-e0e",
+                    "state": "running",
+                    "status": "Up 3 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "29a2c61e-331",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "3e63a537-52c",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "c8fdff70-f6d",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "40052529-9a1",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "28bc79cd-773",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "69289851-3b4",
+                    "state": "running",
+                    "status": "Up 4 days",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+                },
+                {
+                    "name": "c88d4c74-9d2",
+                    "state": "exited",
+                    "status": "Exited (255) 3 weeks ago",
+                    "image": "node:20-bookworm"
+                },
+                {
+                    "name": "c88d4c74-9d2",
+                    "state": "created",
+                    "status": "Created",
+                    "image": "366869154c2e"
+                },
+                {
+                    "name": "6cd92a48-f38",
+                    "state": "exited",
+                    "status": "Exited (130) 7 weeks ago",
+                    "image": "bc0cd42cc6e0"
+                },
+                {
+                    "name": "d60ab9b1-337",
+                    "state": "created",
+                    "status": "Created",
+                    "image": "bc0cd42cc6e0"
+                },
+                {
+                    "name": "8c300a0d-909",
+                    "state": "created",
+                    "status": "Created",
+                    "image": "ghcr.io/parkervcp/yolks:nodejs_21"
+                },
+                {
+                    "name": "4e448520-5ec",
+                    "state": "created",
+                    "status": "Created",
+                    "image": "bc0cd42cc6e0"
+                }
+            ],
+            "pm2": {
+                "present": true,
+                "total": 4,
+                "online": 3,
+                "stopped": 1,
+                "procs": [
+                    {
+                        "name": "nexuspay-api",
+                        "status": "online"
+                    },
+                    {
+                        "name": "makakenya",
+                        "status": "online"
+                    },
+                    {
+                        "name": "nexuspay-deriv-api",
+                        "status": "online"
+                    },
+                    {
+                        "name": "sendmoney",
+                        "status": "stopped"
+                    }
+                ]
+            },
+            "sites": [
+                {
+                    "id": "deriv.makamescopay.com",
+                    "hosts": [
+                        "deriv.makamescopay.com",
+                        "deriv.makamescopay.com"
+                    ],
+                    "server_names": "deriv.makamescopay.com deriv.makamescopay.com",
+                    "owner": "nginx:deriv-makamescopay",
+                    "root": "/opt/nexuspay-deriv/earning-current/web",
+                    "proxy": "http://127.0.0.1:16043",
+                    "cert_epoch": 1800290988,
+                    "cert_days": 65,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "deriv.makamescopay.com": {
+                            "status": 200,
+                            "ms": 37,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 65
+                        }
+                    },
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "host.makamesco-tech.co.ke",
+                    "hosts": [
+                        "host.makamesco-tech.co.ke",
+                        "host.makamesco-tech.co.ke"
+                    ],
+                    "server_names": "host.makamesco-tech.co.ke host.makamesco-tech.co.ke",
+                    "owner": "nginx:hosting-site",
+                    "root": "/var/www/hosting/public",
+                    "proxy": "",
+                    "cert_epoch": 1797764826,
+                    "cert_days": 36,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "host.makamesco-tech.co.ke": {
+                            "status": 405,
+                            "ms": 151,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 36
+                        }
+                    },
+                    "status": 405,
+                    "ms": 151,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "payments.makamesco-tech.co.ke",
+                    "hosts": [
+                        "payments.makamesco-tech.co.ke",
+                        "payments.makamesco-tech.co.ke"
+                    ],
+                    "server_names": "payments.makamesco-tech.co.ke payments.makamesco-tech.co.ke",
+                    "owner": "nginx:makakenya",
+                    "root": "/opt/makakenya/web",
+                    "proxy": "http://127.0.0.1:1543",
+                    "cert_epoch": 1792606048,
+                    "cert_days": -24,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "payments.makamesco-tech.co.ke": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "mpesa.makamescopay.com",
+                    "hosts": [
+                        "mpesa.makamescopay.com",
+                        "mpesa.makamescopay.com"
+                    ],
+                    "server_names": "mpesa.makamescopay.com mpesa.makamescopay.com",
+                    "owner": "nginx:mpesa-makamescopay",
+                    "root": "/opt/makakenya/web",
+                    "proxy": "http://127.0.0.1:1543",
+                    "cert_epoch": 1797842239,
+                    "cert_days": 37,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "mpesa.makamescopay.com": {
+                            "status": 200,
+                            "ms": 37,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 37
+                        }
+                    },
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "app.makamescopay.com",
+                    "hosts": [
+                        "app.makamescopay.com",
+                        "app.makamescopay.com"
+                    ],
+                    "server_names": "app.makamescopay.com app.makamescopay.com",
+                    "owner": "nginx:nexuspay",
+                    "root": "/opt/nexuspay/web/public",
+                    "proxy": "http://127.0.0.1:5000",
+                    "cert_epoch": 1801721170,
+                    "cert_days": 82,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "app.makamescopay.com": {
+                            "status": 200,
+                            "ms": 24,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 82
+                        }
+                    },
+                    "status": 200,
+                    "ms": 24,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "panel.makamesco-tech.co.ke",
+                    "hosts": [
+                        "panel.makamesco-tech.co.ke",
+                        "panel.makamesco-tech.co.ke"
+                    ],
+                    "server_names": "panel.makamesco-tech.co.ke panel.makamesco-tech.co.ke",
+                    "owner": "nginx:pterodactyl-panel",
+                    "root": "/var/www/pterodactyl/public",
+                    "proxy": "http://127.0.0.1:8080",
+                    "cert_epoch": 1797760878,
+                    "cert_days": 36,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "panel.makamesco-tech.co.ke": {
+                            "status": 200,
+                            "ms": 83,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 36
+                        }
+                    },
+                    "status": 200,
+                    "ms": 83,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "sendmoney.co.ke",
+                    "hosts": [
+                        "sendmoney.co.ke",
+                        "www.sendmoney.co.ke",
+                        "sendmoney.co.ke",
+                        "www.sendmoney.co.ke"
+                    ],
+                    "server_names": "sendmoney.co.ke www.sendmoney.co.ke sendmoney.co.ke www.sendmoney.co.ke",
+                    "owner": "nginx:sendmoney",
+                    "root": "/opt/sendmoney/artifacts/portal/dist/public",
+                    "proxy": "https://80.190.81.68",
+                    "cert_epoch": 1798032752,
+                    "cert_days": 39,
+                    "error_log": "",
+                    "tail": [],
+                    "entries": null,
+                    "http": {
+                        "sendmoney.co.ke": {
+                            "status": 404,
+                            "ms": 64,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 38
+                        },
+                        "www.sendmoney.co.ke": {
+                            "status": 404,
+                            "ms": 81,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 38
+                        }
+                    },
+                    "status": 404,
+                    "ms": 64,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                }
+            ],
+            "procs": [
+                {
+                    "cpu": 38,
+                    "mem": 0,
+                    "cmd": "bash"
+                },
+                {
+                    "cpu": 24,
+                    "mem": 0.1,
+                    "cmd": "systemd"
+                },
+                {
+                    "cpu": 13.7,
+                    "mem": 2,
+                    "cmd": "wings"
+                },
+                {
+                    "cpu": 5.9,
+                    "mem": 1.4,
+                    "cmd": "dockerd"
+                },
+                {
+                    "cpu": 5.1,
+                    "mem": 0.6,
+                    "cmd": "containerd"
+                },
+                {
+                    "cpu": 4.8,
+                    "mem": 0.1,
+                    "cmd": "sshd"
+                }
+            ],
+            "memprocs": [
+                {
+                    "cpu": 117736,
+                    "mem": 0,
+                    "cmd": "/opt/makak"
+                }
+            ],
+            "sites_probed_at": 1794620598,
+            "last_good_at": 1794620589,
+            "stale": false
+        },
+        "cpanel-a": {
+            "id": "cpanel-a",
+            "type": "cpanel",
+            "checked_at": 1794620409,
+            "duration_ms": 4288,
+            "reachable": true,
+            "error": null,
+            "metrics": {
+                "hostname": "premium332.web-hosting.com",
+                "os": "",
+                "kernel": "4.18.0-553.144.1.lve.el8.x86_64",
+                "uptime": "up 13 weeks, 1 day, 2 hours, 31 minutes",
+                "uptime_raw": "20:40:12 up 92 days,  2:31,  1 user,  load average: 8.03, 7.49, 7.67",
+                "load1": 8.03,
+                "load5": 7.49,
+                "load15": 7.67,
+                "cpus": 24,
+                "load_pct": 33.5,
+                "mem_total_kb": 135094284,
+                "mem_used_kb": 35068200,
+                "mem_free_kb": 4598204,
+                "mem_pct": 26,
+                "disk_fs": "/dev/sda2",
+                "disk_size_kb": 102626232,
+                "disk_used_kb": 19388800,
+                "disk_avail_kb": 77978168,
+                "disk_pct": 20,
+                "php_cli": "PHP 8.2.35 (cli) (built: Oct 22 2026 18:49:31) (NTS)",
+                "php_cli_ver": "8.2.35",
+                "whoami": "tipmrnhl",
+                "home": "/home/tipmrnhl",
+                "procs": "",
+                "home_size_kb": 4435787216,
+                "home_used_kb": 3806645024,
+                "home_pct": 91,
+                "home_fs": "/dev/sdb1",
+                "inodes_used": 41682593,
+                "inodes_total": 139759616,
+                "cron_entries": 3
+            },
+            "units": [],
+            "containers": [],
+            "pm2": {
+                "present": true,
+                "total": 0,
+                "online": 0,
+                "stopped": 0,
+                "procs": []
+            },
+            "sites": [
+                {
+                    "id": "agent.aiacademia.site",
+                    "hosts": [
+                        "agent.aiacademia.site"
+                    ],
+                    "server_names": "agent.aiacademia.site",
+                    "owner": "cPanel:agent.aiacademia.site",
+                    "root": "/home/tipmrnhl/public_html/agent.aiacademia.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "agent.aiacademia.site": {
+                            "status": 200,
+                            "ms": 558,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 558,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "ambitioushub.store",
+                    "hosts": [
+                        "ambitioushub.store"
+                    ],
+                    "server_names": "ambitioushub.store",
+                    "owner": "cPanel:ambitioushub.store.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/ambitioushub.store",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 49,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 1,
+                    "log_bytes": 0,
+                    "http": {
+                        "ambitioushub.store": {
+                            "status": 200,
+                            "ms": 14,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 49
+                        }
+                    },
+                    "status": 200,
+                    "ms": 14,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "api.xdigitex.space",
+                    "hosts": [
+                        "api.xdigitex.space"
+                    ],
+                    "server_names": "api.xdigitex.space",
+                    "owner": "cPanel:api.xdigitex.space",
+                    "root": "/home/tipmrnhl/api.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 192,
+                    "error_log": "/home/tipmrnhl/api.xdigitex.space/error_log",
+                    "tail": [
+                        "  thrown in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php on line 8",
+                        "[27-Sep-2026 04:40:06 UTC] PHP Fatal error:  Uncaught Error: Undefined constant \"STDIN\" in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php:8",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php on line 8",
+                        "[11-Nov-2026 22:08:32 UTC] PHP Warning:  require(/tmp/providers/ProviderFactory.php): Failed to open stream: No such file or directory in /tmp/test_alloc.php on line 2",
+                        "[11-Nov-2026 22:08:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/tmp/providers/ProviderFactory.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /tmp/test_alloc.php:2",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /tmp/test_alloc.php on line 2",
+                        "[11-Nov-2026 22:08:39 UTC] PHP Warning:  require(/tmp/providers/ProviderFactory.php): Failed to open stream: No such file or directory in /tmp/test_alloc.php on line 2",
+                        "[11-Nov-2026 22:08:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/tmp/providers/ProviderFactory.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /tmp/test_alloc.php:2",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /tmp/test_alloc.php on line 2"
+                    ],
+                    "entries": 20,
+                    "log_bytes": 5180,
+                    "http": {
+                        "api.xdigitex.space": {
+                            "status": 404,
+                            "ms": 514,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 192
+                        }
+                    },
+                    "status": 404,
+                    "ms": 514,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "app.xdigitex.space",
+                    "hosts": [
+                        "app.xdigitex.space"
+                    ],
+                    "server_names": "app.xdigitex.space",
+                    "owner": "cPanel:app.xdigitex.space",
+                    "root": "/home/tipmrnhl/app.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "app.xdigitex.space": {
+                            "status": 200,
+                            "ms": 568,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 568,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "cdvrsbooster.site",
+                    "hosts": [
+                        "cdvrsbooster.site"
+                    ],
+                    "server_names": "cdvrsbooster.site",
+                    "owner": "cPanel:cdvrsbooster.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/cdvrsbooster.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "cdvrsbooster.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "cheapbooster.site",
+                    "hosts": [
+                        "cheapbooster.site"
+                    ],
+                    "server_names": "cheapbooster.site",
+                    "owner": "cPanel:cheapbooster.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/cheapbooster.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "/home/tipmrnhl/cheapbooster.site/error_log",
+                    "tail": [
+                        "#4 /home/tipmrnhl/cheapbooster.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                        "#5 {main}",
+                        "  thrown in /home/tipmrnhl/cheapbooster.site/system/notification-events.php on line 31",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $q in Command line code on line 3",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $db in Command line code on line 3",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Attempt to read property \"prepare\" on null in Command line code on line 3",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $q in Command line code on line 3",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $db in Command line code on line 3",
+                        "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Attempt to read property \"prepare\" on null in Command line code on line 3",
+                        "[10-Nov-2026 07:49:56 Africa/Kinshasa] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and dripfeed=2' at line 1 in /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php:504",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php(504): PDO->query('SELECT * FROM o...')",
+                        "#1 /home/tipmrnhl/cheapbooster.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                        "#2 {main}",
+                        "  thrown in /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php on line 504"
+                    ],
+                    "entries": 54,
+                    "log_bytes": 2126,
+                    "http": {
+                        "cheapbooster.site": {
+                            "status": 200,
+                            "ms": 583,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 583,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "cheapestfollowerskenya.site",
+                    "hosts": [
+                        "cheapestfollowerskenya.site"
+                    ],
+                    "server_names": "cheapestfollowerskenya.site",
+                    "owner": "cPanel:cheapestfollowerskenya.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/cheapestfollowerskenya.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "cheapestfollowerskenya.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "chikpizza.online",
+                    "hosts": [
+                        "chikpizza.online"
+                    ],
+                    "server_names": "chikpizza.online",
+                    "owner": "cPanel:chikpizza.online.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/chikpizza.online",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "/home/tipmrnhl/chikpizza.online/error_log",
+                    "tail": [
+                        "[22-Jul-2026 08:46:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /opt/alt/php82/var/lib/php/session) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                        "[22-Jul-2026 09:07:55 UTC] PHP Warning:  session_start(): open(/opt/alt/php82/var/lib/php/session/sess_40tc1hlu20ni33lcjnl2f53kqe, O_RDWR) failed: Disk quota exceeded (122) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                        "[22-Jul-2026 09:07:55 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /opt/alt/php82/var/lib/php/session) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                        "[31-Jul-2026 15:03:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3",
+                        "[31-Jul-2026 15:03:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3",
+                        "[31-Jul-2026 15:03:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3"
+                    ],
+                    "entries": 21,
+                    "log_bytes": 8997,
+                    "http": {
+                        "chikpizza.online": {
+                            "status": 200,
+                            "ms": 587,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 587,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "chikpizza.store",
+                    "hosts": [
+                        "chikpizza.store"
+                    ],
+                    "server_names": "chikpizza.store",
+                    "owner": "cPanel:chikpizza.store.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/chikpizza.store",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "chikpizza.store": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "clauphanieservices.site",
+                    "hosts": [
+                        "clauphanieservices.site"
+                    ],
+                    "server_names": "clauphanieservices.site",
+                    "owner": "cPanel:clauphanieservices.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/clauphanieservices.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "clauphanieservices.site": {
+                            "status": 200,
+                            "ms": 562,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 562,
+                    "scheme": "http",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "delivery.xdigitex.space",
+                    "hosts": [
+                        "delivery.xdigitex.space"
+                    ],
+                    "server_names": "delivery.xdigitex.space",
+                    "owner": "cPanel:delivery.xdigitex.space",
+                    "root": "/home/tipmrnhl/delivery.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 34,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 10,
+                    "log_bytes": 0,
+                    "http": {
+                        "delivery.xdigitex.space": {
+                            "status": 200,
+                            "ms": 498,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 34
+                        }
+                    },
+                    "status": 200,
+                    "ms": 498,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "deploy.xdigitex.space",
+                    "hosts": [
+                        "deploy.xdigitex.space"
+                    ],
+                    "server_names": "deploy.xdigitex.space",
+                    "owner": "cPanel:deploy.xdigitex.space",
+                    "root": "/home/tipmrnhl/deploy.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 5,
+                    "log_bytes": 0,
+                    "http": {
+                        "deploy.xdigitex.space": {
+                            "status": 502,
+                            "ms": 593,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 502,
+                    "ms": 593,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "digitexsmartsolutions.com",
+                    "hosts": [
+                        "digitexsmartsolutions.com"
+                    ],
+                    "server_names": "digitexsmartsolutions.com",
+                    "owner": "cPanel:digitexsmartsolutions.com.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/digitexsmartsolutions.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 147,
+                    "error_log": "/home/tipmrnhl/digitexsmartsolutions.com/error_log",
+                    "tail": [
+                        "[11-Nov-2026 15:01:25 UTC] Digitex signup: honeypot triggered from 5.2.69.85",
+                        "[11-Nov-2026 15:27:02 UTC] Digitex signup: honeypot triggered from 23.191.200.57",
+                        "[11-Nov-2026 21:56:04 UTC] Digitex signup: honeypot triggered from 45.9.156.238",
+                        "[11-Nov-2026 22:43:06 UTC] PHP Fatal error:  Assignments can only happen to writable values in /tmp/render_test.php on line 4",
+                        "[11-Nov-2026 23:24:49 UTC] PHP Parse error:  syntax error, unexpected token \"&\" in dashboard.php on line 668",
+                        "[12-Nov-2026 19:36:17 UTC] Digitex signup: honeypot triggered from 185.56.83.10",
+                        "[12-Nov-2026 20:50:06 UTC] Digitex signup: honeypot triggered from 94.249.178.227",
+                        "[13-Nov-2026 15:25:55 UTC] Digitex signup: honeypot triggered from 185.220.101.9",
+                        "[13-Nov-2026 15:54:19 UTC] Digitex signup: honeypot triggered from 178.17.171.102",
+                        "[13-Nov-2026 15:54:23 UTC] Digitex signup: honeypot triggered from 178.17.171.102",
+                        "[13-Nov-2026 18:53:21 UTC] Digitex signup: honeypot triggered from 204.8.96.87",
+                        "[13-Nov-2026 23:04:45 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                        "[13-Nov-2026 23:04:50 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                        "[13-Nov-2026 23:04:55 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                        "[14-Nov-2026 00:24:30 UTC] Digitex signup: honeypot triggered from 107.175.218.6"
+                    ],
+                    "entries": 78,
+                    "log_bytes": 6800,
+                    "http": {
+                        "digitexsmartsolutions.com": {
+                            "status": 200,
+                            "ms": 573,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 147
+                        }
+                    },
+                    "status": 200,
+                    "ms": 573,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "don14.online",
+                    "hosts": [
+                        "don14.online"
+                    ],
+                    "server_names": "don14.online",
+                    "owner": "cPanel:don14.online.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/don14.online",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "/home/tipmrnhl/don14.online/error_log",
+                    "tail": [
+                        "[11-Oct-2026 17:26:24 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/tipmrnhl/don14.online/config/auth.php on line 2",
+                        "[13-Oct-2026 02:56:27 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/tipmrnhl/don14.online/config/auth.php on line 2",
+                        "[31-Oct-2026 14:25:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' in /home/tipmrnhl/don14.online/signup_process.php:45",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/don14.online/signup_process.php(45): PDOStatement->execute()",
+                        "#1 {main}",
+                        "  thrown in /home/tipmrnhl/don14.online/signup_process.php on line 45",
+                        "[31-Oct-2026 14:25:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' in /home/tipmrnhl/don14.online/signup_process.php:45",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/don14.online/signup_process.php(45): PDOStatement->execute()",
+                        "#1 {main}",
+                        "  thrown in /home/tipmrnhl/don14.online/signup_process.php on line 45"
+                    ],
+                    "entries": 56,
+                    "log_bytes": 1226,
+                    "http": {
+                        "don14.online": {
+                            "status": 200,
+                            "ms": 594,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 594,
+                    "scheme": "http",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "enominich.site",
+                    "hosts": [
+                        "enominich.site"
+                    ],
+                    "server_names": "enominich.site",
+                    "owner": "cPanel:enominich.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/enominich.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 147,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "enominich.site": {
+                            "status": 200,
+                            "ms": 572,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 147
+                        }
+                    },
+                    "status": 200,
+                    "ms": 572,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "equatorvoiceafrica.com",
+                    "hosts": [
+                        "equatorvoiceafrica.com"
+                    ],
+                    "server_names": "equatorvoiceafrica.com",
+                    "owner": "cPanel:equatorvoiceafrica.com.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/equatorvoiceafrica.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "/home/tipmrnhl/equatorvoiceafrica.com/error_log",
+                    "tail": [
+                        "[03-Nov-2026 15:00:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' LEFT(,80) AS value_preview FROM settings ORDER BY' at line 1 in Command line code:1",
+                        "Stack trace:",
+                        "#0 Command line code(1): PDO->query()",
+                        "#1 {main}",
+                        "  thrown in Command line code on line 1",
+                        "[03-Nov-2026 15:26:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'published' in 'WHERE' in Command line code:1",
+                        "Stack trace:",
+                        "#0 Command line code(1): PDO->query()",
+                        "#1 {main}",
+                        "  thrown in Command line code on line 1"
+                    ],
+                    "entries": 30,
+                    "log_bytes": 717,
+                    "http": {
+                        "equatorvoiceafrica.com": {
+                            "status": 200,
+                            "ms": 584,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 584,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "exams.chikpizza.online",
+                    "hosts": [
+                        "exams.chikpizza.online"
+                    ],
+                    "server_names": "exams.chikpizza.online",
+                    "owner": "cPanel:exams.chikpizza.online",
+                    "root": "/home/tipmrnhl/chikpizza.online/exams",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 12,
+                    "log_bytes": 0,
+                    "http": {
+                        "exams.chikpizza.online": {
+                            "status": 200,
+                            "ms": 630,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 630,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "fkmbooste.site",
+                    "hosts": [
+                        "fkmbooste.site"
+                    ],
+                    "server_names": "fkmbooste.site",
+                    "owner": "cPanel:fkmbooste.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/malabora.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 173,
+                    "error_log": "/home/tipmrnhl/malabora.site/error_log",
+                    "tail": [
+                        "#2 {main}",
+                        "  thrown in /home/tipmrnhl/malabora.site/GlyconSMMScript.php on line 528",
+                        "[12-Nov-2026 19:37:56 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and dripfeed=2' at line 1 in /home/tipmrnhl/malabora.site/GlyconSMMScript.php:528",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/malabora.site/GlyconSMMScript.php(528): PDO->query('SELECT * FROM o...')",
+                        "#1 /home/tipmrnhl/malabora.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                        "#2 {main}",
+                        "  thrown in /home/tipmrnhl/malabora.site/GlyconSMMScript.php on line 528",
+                        "[13-Nov-2026 19:59:52 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'service_id' cannot be null in /home/tipmrnhl/malabora.site/controller/panel/neworder.php:273",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/malabora.site/controller/panel/neworder.php(273): PDOStatement->execute(Array)",
+                        "#1 /home/tipmrnhl/malabora.site/GlyconSMMScript.php(197): require('/home/tipmrnhl/...')",
+                        "#2 /home/tipmrnhl/malabora.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                        "#3 {main}",
+                        "  thrown in /home/tipmrnhl/malabora.site/controller/panel/neworder.php on line 273"
+                    ],
+                    "entries": 54,
+                    "log_bytes": 26375,
+                    "http": {
+                        "fkmbooste.site": {
+                            "status": 200,
+                            "ms": 658,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 173
+                        }
+                    },
+                    "status": 200,
+                    "ms": 658,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "foreverus.tipmaxstiven.site",
+                    "hosts": [
+                        "foreverus.tipmaxstiven.site"
+                    ],
+                    "server_names": "foreverus.tipmaxstiven.site",
+                    "owner": "cPanel:foreverus.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/foreverus.site/public_html",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "foreverus.tipmaxstiven.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "gbs.mediaboost.site",
+                    "hosts": [
+                        "gbs.mediaboost.site"
+                    ],
+                    "server_names": "gbs.mediaboost.site",
+                    "owner": "cPanel:gbs.mediaboost.site",
+                    "root": "/home/tipmrnhl/gbs.mediaboost.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "gbs.mediaboost.site": {
+                            "status": 200,
+                            "ms": 548,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 548,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "gbsbusiness.site",
+                    "hosts": [
+                        "gbsbusiness.site"
+                    ],
+                    "server_names": "gbsbusiness.site",
+                    "owner": "cPanel:gbsbusiness.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/gbsbusiness.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "gbsbusiness.site": {
+                            "status": 200,
+                            "ms": 585,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 585,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "gbssarl.site",
+                    "hosts": [
+                        "gbssarl.site"
+                    ],
+                    "server_names": "gbssarl.site",
+                    "owner": "cPanel:gbssarl.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/gbssarl.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "gbssarl.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "gt.aiacademia.site",
+                    "hosts": [
+                        "gt.aiacademia.site"
+                    ],
+                    "server_names": "gt.aiacademia.site",
+                    "owner": "cPanel:gt.aiacademia.site",
+                    "root": "/home/tipmrnhl/public_html/gt.aiacademia.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "gt.aiacademia.site": {
+                            "status": 200,
+                            "ms": 566,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 566,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "hosting.aiacademia.site",
+                    "hosts": [
+                        "hosting.aiacademia.site"
+                    ],
+                    "server_names": "hosting.aiacademia.site",
+                    "owner": "cPanel:hosting.aiacademia.site",
+                    "root": "/home/tipmrnhl/public_html/hosting.aiacademia.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "hosting.aiacademia.site": {
+                            "status": 200,
+                            "ms": 586,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 586,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "king.aiacademia.site",
+                    "hosts": [
+                        "king.aiacademia.site"
+                    ],
+                    "server_names": "king.aiacademia.site",
+                    "owner": "cPanel:king.aiacademia.site",
+                    "root": "/home/tipmrnhl/public_html/king.aiacademia.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "king.aiacademia.site": {
+                            "status": 200,
+                            "ms": 634,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 634,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "legrandmalaba.com",
+                    "hosts": [
+                        "legrandmalaba.com"
+                    ],
+                    "server_names": "legrandmalaba.com",
+                    "owner": "cPanel:legrandmalaba.com.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/legrandmalaba.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 1,
+                    "log_bytes": 0,
+                    "http": {
+                        "legrandmalaba.com": {
+                            "status": 200,
+                            "ms": 369,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 369,
+                    "scheme": "http",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "love.timesave.shop",
+                    "hosts": [
+                        "love.timesave.shop"
+                    ],
+                    "server_names": "love.timesave.shop",
+                    "owner": "cPanel:love.timesave.shop",
+                    "root": "/home/tipmrnhl/love.timesave.shop",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "love.timesave.shop": {
+                            "status": 200,
+                            "ms": 513,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 513,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "makamesco.xdigitex.space",
+                    "hosts": [
+                        "makamesco.xdigitex.space"
+                    ],
+                    "server_names": "makamesco.xdigitex.space",
+                    "owner": "cPanel:makamesco.xdigitex.space",
+                    "root": "/home/tipmrnhl/makamesco.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "makamesco.xdigitex.space": {
+                            "status": 200,
+                            "ms": 555,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 555,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "malabora.site",
+                    "hosts": [
+                        "malabora.site"
+                    ],
+                    "server_names": "malabora.site",
+                    "owner": "cPanel:malabora.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/fkmbooste.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 147,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "malabora.site": {
+                            "status": 200,
+                            "ms": 531,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 147
+                        }
+                    },
+                    "status": 200,
+                    "ms": 531,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mbbusiness.site",
+                    "hosts": [
+                        "mbbusiness.site"
+                    ],
+                    "server_names": "mbbusiness.site",
+                    "owner": "cPanel:mbbusiness.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/mbbusiness.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 170,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 12,
+                    "log_bytes": 0,
+                    "http": {
+                        "mbbusiness.site": {
+                            "status": 200,
+                            "ms": 522,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 170
+                        }
+                    },
+                    "status": 200,
+                    "ms": 522,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mediaboost.site",
+                    "hosts": [
+                        "mediaboost.site"
+                    ],
+                    "server_names": "mediaboost.site",
+                    "owner": "cPanel:mediaboost.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/mediaboost.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 147,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "mediaboost.site": {
+                            "status": 301,
+                            "ms": 484,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 147
+                        }
+                    },
+                    "status": 301,
+                    "ms": 484,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mkboost.site",
+                    "hosts": [
+                        "mkboost.site"
+                    ],
+                    "server_names": "mkboost.site",
+                    "owner": "cPanel:mkboost.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/mkboost.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 4,
+                    "log_bytes": 0,
+                    "http": {
+                        "mkboost.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "mmf.malabora.site",
+                    "hosts": [
+                        "mmf.malabora.site"
+                    ],
+                    "server_names": "mmf.malabora.site",
+                    "owner": "cPanel:mmf.malabora.site",
+                    "root": "/home/tipmrnhl/mmf.malabora.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "/home/tipmrnhl/mmf.malabora.site/error_log",
+                    "tail": [
+                        "[09-Jun-2026 14:36:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                        "#1 {main}",
+                        "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16",
+                        "[09-Jun-2026 14:36:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                        "#1 {main}",
+                        "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16",
+                        "[09-Jun-2026 14:36:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                        "Stack trace:",
+                        "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                        "#1 {main}",
+                        "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16"
+                    ],
+                    "entries": 30,
+                    "log_bytes": 2622,
+                    "http": {
+                        "mmf.malabora.site": {
+                            "status": 200,
+                            "ms": 569,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 569,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "mpesa.xdigitex.space",
+                    "hosts": [
+                        "mpesa.xdigitex.space"
+                    ],
+                    "server_names": "mpesa.xdigitex.space",
+                    "owner": "cPanel:mpesa.xdigitex.space",
+                    "root": "/home/tipmrnhl/mpesa.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 166,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "mpesa.xdigitex.space": {
+                            "status": 200,
+                            "ms": 575,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 166
+                        }
+                    },
+                    "status": 200,
+                    "ms": 575,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "novaspack.com",
+                    "hosts": [
+                        "novaspack.com"
+                    ],
+                    "server_names": "novaspack.com",
+                    "owner": "cPanel:novaspack.com.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/novaspack.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "novaspack.com": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "ogzensmm.online",
+                    "hosts": [
+                        "ogzensmm.online"
+                    ],
+                    "server_names": "ogzensmm.online",
+                    "owner": "cPanel:ogzensmm.online.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/ogzensmm.online",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 59,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "ogzensmm.online": {
+                            "status": 200,
+                            "ms": 45,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 59
+                        }
+                    },
+                    "status": 200,
+                    "ms": 45,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "panel.aiacademia.site",
+                    "hosts": [
+                        "panel.aiacademia.site"
+                    ],
+                    "server_names": "panel.aiacademia.site",
+                    "owner": "cPanel:panel.aiacademia.site",
+                    "root": "/home/tipmrnhl/public_html/panel.aiacademia.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "panel.aiacademia.site": {
+                            "status": 200,
+                            "ms": 556,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 556,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "panel.enominich.site",
+                    "hosts": [
+                        "panel.enominich.site"
+                    ],
+                    "server_names": "panel.enominich.site",
+                    "owner": "cPanel:panel.enominich.site",
+                    "root": "/home/tipmrnhl/panel.enominich.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 143,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 1,
+                    "log_bytes": 0,
+                    "http": {
+                        "panel.enominich.site": {
+                            "status": 200,
+                            "ms": 552,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 143
+                        }
+                    },
+                    "status": 200,
+                    "ms": 552,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "panel.mkboost.site",
+                    "hosts": [
+                        "panel.mkboost.site"
+                    ],
+                    "server_names": "panel.mkboost.site",
+                    "owner": "cPanel:panel.mkboost.site",
+                    "root": "/home/tipmrnhl/panel.mkboost.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "panel.mkboost.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "http_error": "no response",
+                    "up": false
+                },
+                {
+                    "id": "pay.cheapbooster.site",
+                    "hosts": [
+                        "pay.cheapbooster.site"
+                    ],
+                    "server_names": "pay.cheapbooster.site",
+                    "owner": "cPanel:pay.cheapbooster.site",
+                    "root": "/home/tipmrnhl/apps/paygateway/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 7,
+                    "log_bytes": 0,
+                    "http": {
+                        "pay.cheapbooster.site": {
+                            "status": 200,
+                            "ms": 717,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 717,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "pay.xdigitex.space",
+                    "hosts": [
+                        "pay.xdigitex.space"
+                    ],
+                    "server_names": "pay.xdigitex.space",
+                    "owner": "cPanel:pay.xdigitex.space",
+                    "root": "/home/tipmrnhl/pay.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 7,
+                    "log_bytes": 0,
+                    "http": {
+                        "pay.xdigitex.space": {
+                            "status": 200,
+                            "ms": 501,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 501,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "paytest.xdigitex.space",
+                    "hosts": [
+                        "paytest.xdigitex.space"
+                    ],
+                    "server_names": "paytest.xdigitex.space",
+                    "owner": "cPanel:paytest.xdigitex.space",
+                    "root": "/home/tipmrnhl/paytest-probe",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 2,
+                    "log_bytes": 0,
+                    "http": {
+                        "paytest.xdigitex.space": {
+                            "status": 200,
+                            "ms": 521,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        }
+                    },
+                    "status": 200,
+                    "ms": 521,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "pos.xdigitex.space",
+                    "hosts": [
+                        "pos.xdigitex.space"
+                    ],
+                    "server_names": "pos.xdigitex.space",
+                    "owner": "cPanel:pos.xdigitex.space",
+                    "root": "/home/tipmrnhl/pos.xdigitex.space/public",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 184,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "pos.xdigitex.space": {
+                            "status": 200,
+                            "ms": 562,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 184
+                        }
+                    },
+                    "status": 200,
+                    "ms": 562,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "propos.xdigitex.space",
+                    "hosts": [
+                        "propos.xdigitex.space"
+                    ],
+                    "server_names": "propos.xdigitex.space",
+                    "owner": "cPanel:propos.xdigitex.space",
+                    "root": "/home/tipmrnhl/propos.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "propos.xdigitex.space": {
+                            "status": 200,
+                            "ms": 539,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 200,
+                    "ms": 539,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "shop.tdcgangspro.site",
+                    "hosts": [
+                        "shop.tdcgangspro.site"
+                    ],
+                    "server_names": "shop.tdcgangspro.site",
+                    "owner": "cPanel:shop.tdcgangspro.site",
+                    "root": "/home/tipmrnhl/shop.tdcgangspro.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 3,
+                    "log_bytes": 0,
+                    "http": {
+                        "shop.tdcgangspro.site": {
+                            "status": 200,
+                            "ms": 468,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 468,
+                    "scheme": "http",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "shop.timesave.shop",
+                    "hosts": [
+                        "shop.timesave.shop"
+                    ],
+                    "server_names": "shop.timesave.shop",
+                    "owner": "cPanel:shop.timesave.shop",
+                    "root": "/home/tipmrnhl/shop.timesave.shop",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 57,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "shop.timesave.shop": {
+                            "status": 200,
+                            "ms": 542,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 57
+                        }
+                    },
+                    "status": 200,
+                    "ms": 542,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "shop.xdigitex.space",
+                    "hosts": [
+                        "shop.xdigitex.space"
+                    ],
+                    "server_names": "shop.xdigitex.space",
+                    "owner": "cPanel:shop.xdigitex.space",
+                    "root": "/home/tipmrnhl/shop.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 102,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "shop.xdigitex.space": {
+                            "status": 200,
+                            "ms": 603,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 102
+                        }
+                    },
+                    "status": 200,
+                    "ms": 603,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "smm.enominich.site",
+                    "hosts": [
+                        "smm.enominich.site"
+                    ],
+                    "server_names": "smm.enominich.site",
+                    "owner": "cPanel:smm.enominich.site",
+                    "root": "/home/tipmrnhl/smm.enominich.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 142,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "smm.enominich.site": {
+                            "status": 200,
+                            "ms": 566,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 142
+                        }
+                    },
+                    "status": 200,
+                    "ms": 566,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "smmlab.enominich.site",
+                    "hosts": [
+                        "smmlab.enominich.site"
+                    ],
+                    "server_names": "smmlab.enominich.site",
+                    "owner": "cPanel:smmlab.enominich.site",
+                    "root": "/home/tipmrnhl/smmlab.enominich.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 142,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "smmlab.enominich.site": {
+                            "status": 508,
+                            "ms": 575,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 142
+                        }
+                    },
+                    "status": 508,
+                    "ms": 575,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "social.xdigitex.space",
+                    "hosts": [
+                        "social.xdigitex.space"
+                    ],
+                    "server_names": "social.xdigitex.space",
+                    "owner": "cPanel:social.xdigitex.space",
+                    "root": "/home/tipmrnhl/social.xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 59,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "social.xdigitex.space": {
+                            "status": 508,
+                            "ms": 607,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 59
+                        }
+                    },
+                    "status": 508,
+                    "ms": 607,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "ssdboost.com",
+                    "hosts": [
+                        "ssdboost.com"
+                    ],
+                    "server_names": "ssdboost.com",
+                    "owner": "cPanel:ssdboost.com.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/ssdboost.com",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "ssdboost.com": {
+                            "status": 508,
+                            "ms": 629,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 508,
+                    "ms": 629,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "statusearn.site",
+                    "hosts": [
+                        "statusearn.site"
+                    ],
+                    "server_names": "statusearn.site",
+                    "owner": "cPanel:statusearn.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/statusearn.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "/home/tipmrnhl/statusearn.site/error_log",
+                    "tail": [
+                        "#0 Command line code(1): implode()",
+                        "#1 {main}",
+                        "  thrown in Command line code on line 1",
+                        "[13-Sep-2026 20:57:54 UTC] PHP Warning:  file_get_contents(bootstrap/cache/routes-v7.php): Failed to open stream: No such file or directory in Command line code on line 1",
+                        "[13-Sep-2026 21:51:37 UTC] PHP Fatal error:  Uncaught Error: Undefined constant \"uri\" in Command line code:1",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in Command line code on line 1",
+                        "[13-Sep-2026 22:06:50 UTC] PHP Fatal error:  Uncaught Error: Object of class Illuminate\\Database\\Query\\Builder could not be converted to string in Command line code:1",
+                        "Stack trace:",
+                        "#0 {main}",
+                        "  thrown in Command line code on line 1",
+                        "[13-Sep-2026 23:26:52 UTC] PHP Warning:  The use statement with non-compound name 'Throwable' has no effect in database/migrations/2026_09_14_120500_relax_json_check_on_withdrawals_destination.php on line 7",
+                        "[14-Sep-2026 18:04:46 UTC] PHP Parse error:  syntax error, unexpected token \"\\\", expecting end of file in Command line code on line 1",
+                        "[14-Sep-2026 18:16:00 UTC] PHP Parse error:  syntax error, unexpected token \"\\\", expecting end of file in Command line code on line 1"
+                    ],
+                    "entries": 22,
+                    "log_bytes": 2988,
+                    "http": {
+                        "statusearn.site": {
+                            "status": 508,
+                            "ms": 591,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 508,
+                    "ms": 591,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "tdccharity.org",
+                    "hosts": [
+                        "tdccharity.org"
+                    ],
+                    "server_names": "tdccharity.org",
+                    "owner": "cPanel:tdccharity.org.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/tdccharity.org",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 154,
+                    "error_log": "/home/tipmrnhl/tdccharity.org/error_log",
+                    "tail": [
+                        "[08-Sep-2026 07:44:31 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:33 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:33 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:35 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:35 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:37 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:37 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:39 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:39 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:40 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:40 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:42 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:42 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:44 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                        "[08-Sep-2026 07:44:44 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9"
+                    ],
+                    "entries": 13,
+                    "log_bytes": 55879,
+                    "http": {
+                        "tdccharity.org": {
+                            "status": 508,
+                            "ms": 543,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 154
+                        }
+                    },
+                    "status": 508,
+                    "ms": 543,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "tdcgangspro.site",
+                    "hosts": [
+                        "tdcgangspro.site"
+                    ],
+                    "server_names": "tdcgangspro.site",
+                    "owner": "cPanel:tdcgangspro.site.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/tdcgangspro.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": null,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "tdcgangspro.site": {
+                            "status": 200,
+                            "ms": 570,
+                            "scheme": "http",
+                            "error": "",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 200,
+                    "ms": 570,
+                    "scheme": "http",
+                    "http_error": "",
+                    "up": true
+                },
+                {
+                    "id": "test.mediaboost.site",
+                    "hosts": [
+                        "test.mediaboost.site"
+                    ],
+                    "server_names": "test.mediaboost.site",
+                    "owner": "cPanel:test.mediaboost.site",
+                    "root": "/home/tipmrnhl/test.mediaboost.site",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 98,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 0,
+                    "log_bytes": 0,
+                    "http": {
+                        "test.mediaboost.site": {
+                            "status": 508,
+                            "ms": 532,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 98
+                        }
+                    },
+                    "status": 508,
+                    "ms": 532,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "timesave.shop",
+                    "hosts": [
+                        "timesave.shop"
+                    ],
+                    "server_names": "timesave.shop",
+                    "owner": "cPanel:timesave.shop.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/timesave.shop",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 87,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 2,
+                    "log_bytes": 0,
+                    "http": {
+                        "timesave.shop": {
+                            "status": 508,
+                            "ms": 554,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 87
+                        }
+                    },
+                    "status": 508,
+                    "ms": 554,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "aiacademia.site",
+                    "hosts": [
+                        "aiacademia.site",
+                        "tipmaxstiven.site"
+                    ],
+                    "server_names": "aiacademia.site tipmaxstiven.site",
+                    "owner": "cPanel:tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/public_html",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 187,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 6,
+                    "log_bytes": 0,
+                    "http": {
+                        "aiacademia.site": {
+                            "status": 508,
+                            "ms": 540,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 187
+                        },
+                        "tipmaxstiven.site": {
+                            "status": 0,
+                            "ms": 0,
+                            "scheme": "",
+                            "error": "no response",
+                            "tls_days": null
+                        }
+                    },
+                    "status": 508,
+                    "ms": 540,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                },
+                {
+                    "id": "xdigitex.space",
+                    "hosts": [
+                        "xdigitex.space"
+                    ],
+                    "server_names": "xdigitex.space",
+                    "owner": "cPanel:xdigitex.space.tipmaxstiven.site",
+                    "root": "/home/tipmrnhl/xdigitex.space",
+                    "proxy": "",
+                    "cert_epoch": null,
+                    "cert_days": 147,
+                    "error_log": "none",
+                    "tail": [],
+                    "entries": 6,
+                    "log_bytes": 0,
+                    "http": {
+                        "xdigitex.space": {
+                            "status": 508,
+                            "ms": 497,
+                            "scheme": "https",
+                            "error": "",
+                            "tls_days": 147
+                        }
+                    },
+                    "status": 508,
+                    "ms": 497,
+                    "scheme": "https",
+                    "http_error": "",
+                    "up": false
+                }
+            ],
+            "procs": [
+                {
+                    "cpu": 1,
+                    "mem": 0,
+                    "cmd": "lsphp"
+                },
+                {
+                    "cpu": 0.3,
+                    "mem": 0,
+                    "cmd": "lsphp"
+                },
+                {
+                    "cpu": 0,
+                    "mem": 0,
+                    "cmd": "ssh"
+                },
+                {
+                    "cpu": 0,
+                    "mem": 0,
+                    "cmd": "lsphp"
+                },
+                {
+                    "cpu": 0,
+                    "mem": 0,
+                    "cmd": "lsphp"
+                },
+                {
+                    "cpu": 0,
+                    "mem": 0,
+                    "cmd": "bash"
+                }
+            ],
+            "memprocs": [],
+            "sites_probed_at": 1794620429,
+            "last_good_at": 1794620409,
+            "stale": false
+        },
+        "cpanel-b": {
+            "id": "cpanel-b",
+            "type": "cpanel",
+            "checked_at": 1794620409,
+            "duration_ms": 1494,
+            "reachable": false,
+            "error": "gbsbklvy@66.29.137.179: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+            "metrics": [],
+            "units": [],
+            "containers": [],
+            "pm2": [],
+            "sites": [],
+            "procs": [],
+            "memprocs": [],
+            "sites_probed_at": 0
+        }
+    },
+    "updated_at": 1794620837,
+    "collector": {
+        "ran": true,
+        "refreshed": [
+            "vps-a"
+        ],
+        "timed_out": []
+    }
+}

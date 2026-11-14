@@ -1,0 +1,15 @@
+[2026-09-27 02:58:12] target=vps-a | re-check | ssh/local reachable;LOAD=0.41;LOADPCT=5.1%;MEM=6%;DISK=5%;END=1
+[2026-09-27 02:58:12] target=all | re-check all | vps-a(UP;LOAD=5.1%;MEM=6%;DISK=5%;SITES=4;SITES_DOWN=0) vps-b(UP;LOAD=5.5%;MEM=37.1%;DISK=15%;SITES=7;SITES_DOWN=2) cpanel-a(UP;LOAD=35%;MEM=24.2%;DISK=19%;SITES=56;SITES_DOWN=22) cpanel-b(UP;LOAD=55.5%;MEM=37.3%;DISK=21%;SITES=3;SITES_DOWN=1);END=1
+[2026-09-27 02:58:12] target=vps-a | request rejected | Invalid CSRF token
+[2026-09-27 02:58:12] target=evil; rm -rf / | request rejected | Unknown target
+[2026-09-27 02:58:12] target=- | request rejected | POST required
+[2026-09-27 02:58:12] target=vps-a | request rejected | Unknown action
+[2026-09-27 02:58:12] target=vps-zzz | request rejected | Unknown target
+[2026-09-27 03:00:09] target=vps-a | re-check | ssh/local reachable;LOAD=0.18;LOADPCT=2.3%;MEM=6.2%;DISK=5%;END=1
+[2026-09-27 03:00:23] target=vps-a | Reload nginx | UP | exit 0 | unit=active/running/enabled;LOAD=1.8%;MEM=5.9%;DISK=5%;END=1
+[2026-09-27 03:00:33] target=vps-a | Reload nginx | UP | exit 0 | unit=active/running/enabled;LOAD=1.5%;MEM=6%;DISK=5%;END=1
+[2026-09-27 03:00:59] target=vps-b | re-check | ssh/local reachable;LOAD=0.92;LOADPCT=23%;MEM=36.9%;DISK=15%;END=1
+[2026-09-27 03:01:09] target=vps-a | Reload nginx | UP | exit 0 | unit=active/running/enabled;LOAD=2.3%;MEM=6%;DISK=5%;END=1
+[2026-09-27 03:01:09] target=vps-a | request rejected | Rate limited (one action per target per 5s)
+[2026-09-27 03:05:37] target=vps-b | Reload nginx | UP | exit 0 | unit=active/running/enabled;LOAD=11%;MEM=36.9%;DISK=15%;END=1
+[2026-09-27 03:05:50] target=cpanel-a | re-check only (no root on shared host) | UP | ssh reachable;UPTIME=up 6 weeks, 2 days, 3 hours, 56 minutes;LOAD=8.89 7.83 7.16;DISK=19%;SITES=56;END=1

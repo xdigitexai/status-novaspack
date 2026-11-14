@@ -1,0 +1,421 @@
+{
+    "id": "vps-b",
+    "type": "vps",
+    "checked_at": 1794620589,
+    "duration_ms": 7458,
+    "reachable": true,
+    "error": null,
+    "metrics": {
+        "hostname": "vmi3427589",
+        "os": "Ubuntu 24.04.4 LTS",
+        "kernel": "6.8.0-147-generic",
+        "uptime": "up 4 days, 9 hours, 52 minutes",
+        "uptime_raw": "02:43:11 up 4 days,  9:52,  1 user,  load average: 0.21, 0.59, 0.78",
+        "load1": 0.21,
+        "load5": 0.59,
+        "load15": 0.78,
+        "cpus": 4,
+        "load_pct": 5.3,
+        "mem_total_kb": 8131768,
+        "mem_used_kb": 2784140,
+        "mem_free_kb": 3638460,
+        "mem_pct": 34.2,
+        "disk_fs": "/dev/sda1",
+        "disk_size_kb": 151263856,
+        "disk_used_kb": 35137712,
+        "disk_avail_kb": 116109760,
+        "disk_pct": 24,
+        "php_cli": "",
+        "php_cli_ver": "",
+        "whoami": "root",
+        "home": "",
+        "procs": "710 711856",
+        "queue_pending": "0",
+        "queue_failed": "72",
+        "queue_inflight": "0",
+        "queue_note": "",
+        "ptero_present": 1,
+        "docker_present": 1,
+        "docker_running": 7,
+        "docker_total": 13,
+        "docker_unhealthy": 0,
+        "docker_stopped": 6,
+        "pm2_present": 1
+    },
+    "units": {
+        "docker": "active/running/enabled",
+        "containerd": "active/running/enabled",
+        "nginx": "active/running/enabled",
+        "mariadb": "active/running/enabled",
+        "redis-server": "active/running/enabled",
+        "wings": "active/running/enabled",
+        "pteroq": "active/running/enabled"
+    },
+    "containers": [
+        {
+            "name": "c55c97da-e0e",
+            "state": "running",
+            "status": "Up 3 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "29a2c61e-331",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "3e63a537-52c",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "c8fdff70-f6d",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "40052529-9a1",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "28bc79cd-773",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "69289851-3b4",
+            "state": "running",
+            "status": "Up 4 days",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_20"
+        },
+        {
+            "name": "c88d4c74-9d2",
+            "state": "exited",
+            "status": "Exited (255) 3 weeks ago",
+            "image": "node:20-bookworm"
+        },
+        {
+            "name": "c88d4c74-9d2",
+            "state": "created",
+            "status": "Created",
+            "image": "366869154c2e"
+        },
+        {
+            "name": "6cd92a48-f38",
+            "state": "exited",
+            "status": "Exited (130) 7 weeks ago",
+            "image": "bc0cd42cc6e0"
+        },
+        {
+            "name": "d60ab9b1-337",
+            "state": "created",
+            "status": "Created",
+            "image": "bc0cd42cc6e0"
+        },
+        {
+            "name": "8c300a0d-909",
+            "state": "created",
+            "status": "Created",
+            "image": "ghcr.io/parkervcp/yolks:nodejs_21"
+        },
+        {
+            "name": "4e448520-5ec",
+            "state": "created",
+            "status": "Created",
+            "image": "bc0cd42cc6e0"
+        }
+    ],
+    "pm2": {
+        "present": true,
+        "total": 4,
+        "online": 3,
+        "stopped": 1,
+        "procs": [
+            {
+                "name": "nexuspay-api",
+                "status": "online"
+            },
+            {
+                "name": "makakenya",
+                "status": "online"
+            },
+            {
+                "name": "nexuspay-deriv-api",
+                "status": "online"
+            },
+            {
+                "name": "sendmoney",
+                "status": "stopped"
+            }
+        ]
+    },
+    "sites": [
+        {
+            "id": "deriv.makamescopay.com",
+            "hosts": [
+                "deriv.makamescopay.com",
+                "deriv.makamescopay.com"
+            ],
+            "server_names": "deriv.makamescopay.com deriv.makamescopay.com",
+            "owner": "nginx:deriv-makamescopay",
+            "root": "/opt/nexuspay-deriv/earning-current/web",
+            "proxy": "http://127.0.0.1:16043",
+            "cert_epoch": 1800290988,
+            "cert_days": 65,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "deriv.makamescopay.com": {
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 65
+                }
+            },
+            "status": 200,
+            "ms": 37,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "host.makamesco-tech.co.ke",
+            "hosts": [
+                "host.makamesco-tech.co.ke",
+                "host.makamesco-tech.co.ke"
+            ],
+            "server_names": "host.makamesco-tech.co.ke host.makamesco-tech.co.ke",
+            "owner": "nginx:hosting-site",
+            "root": "/var/www/hosting/public",
+            "proxy": "",
+            "cert_epoch": 1797764826,
+            "cert_days": 36,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "host.makamesco-tech.co.ke": {
+                    "status": 405,
+                    "ms": 151,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 36
+                }
+            },
+            "status": 405,
+            "ms": 151,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "payments.makamesco-tech.co.ke",
+            "hosts": [
+                "payments.makamesco-tech.co.ke",
+                "payments.makamesco-tech.co.ke"
+            ],
+            "server_names": "payments.makamesco-tech.co.ke payments.makamesco-tech.co.ke",
+            "owner": "nginx:makakenya",
+            "root": "/opt/makakenya/web",
+            "proxy": "http://127.0.0.1:1543",
+            "cert_epoch": 1792606048,
+            "cert_days": -24,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "payments.makamesco-tech.co.ke": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "mpesa.makamescopay.com",
+            "hosts": [
+                "mpesa.makamescopay.com",
+                "mpesa.makamescopay.com"
+            ],
+            "server_names": "mpesa.makamescopay.com mpesa.makamescopay.com",
+            "owner": "nginx:mpesa-makamescopay",
+            "root": "/opt/makakenya/web",
+            "proxy": "http://127.0.0.1:1543",
+            "cert_epoch": 1797842239,
+            "cert_days": 37,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "mpesa.makamescopay.com": {
+                    "status": 200,
+                    "ms": 37,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 37
+                }
+            },
+            "status": 200,
+            "ms": 37,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "app.makamescopay.com",
+            "hosts": [
+                "app.makamescopay.com",
+                "app.makamescopay.com"
+            ],
+            "server_names": "app.makamescopay.com app.makamescopay.com",
+            "owner": "nginx:nexuspay",
+            "root": "/opt/nexuspay/web/public",
+            "proxy": "http://127.0.0.1:5000",
+            "cert_epoch": 1801721170,
+            "cert_days": 82,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "app.makamescopay.com": {
+                    "status": 200,
+                    "ms": 24,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 82
+                }
+            },
+            "status": 200,
+            "ms": 24,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "panel.makamesco-tech.co.ke",
+            "hosts": [
+                "panel.makamesco-tech.co.ke",
+                "panel.makamesco-tech.co.ke"
+            ],
+            "server_names": "panel.makamesco-tech.co.ke panel.makamesco-tech.co.ke",
+            "owner": "nginx:pterodactyl-panel",
+            "root": "/var/www/pterodactyl/public",
+            "proxy": "http://127.0.0.1:8080",
+            "cert_epoch": 1797760878,
+            "cert_days": 36,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "panel.makamesco-tech.co.ke": {
+                    "status": 200,
+                    "ms": 83,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 36
+                }
+            },
+            "status": 200,
+            "ms": 83,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "sendmoney.co.ke",
+            "hosts": [
+                "sendmoney.co.ke",
+                "www.sendmoney.co.ke",
+                "sendmoney.co.ke",
+                "www.sendmoney.co.ke"
+            ],
+            "server_names": "sendmoney.co.ke www.sendmoney.co.ke sendmoney.co.ke www.sendmoney.co.ke",
+            "owner": "nginx:sendmoney",
+            "root": "/opt/sendmoney/artifacts/portal/dist/public",
+            "proxy": "https://80.190.81.68",
+            "cert_epoch": 1798032752,
+            "cert_days": 39,
+            "error_log": "",
+            "tail": [],
+            "entries": null,
+            "http": {
+                "sendmoney.co.ke": {
+                    "status": 404,
+                    "ms": 64,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 38
+                },
+                "www.sendmoney.co.ke": {
+                    "status": 404,
+                    "ms": 81,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 38
+                }
+            },
+            "status": 404,
+            "ms": 64,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        }
+    ],
+    "procs": [
+        {
+            "cpu": 38,
+            "mem": 0,
+            "cmd": "bash"
+        },
+        {
+            "cpu": 24,
+            "mem": 0.1,
+            "cmd": "systemd"
+        },
+        {
+            "cpu": 13.7,
+            "mem": 2,
+            "cmd": "wings"
+        },
+        {
+            "cpu": 5.9,
+            "mem": 1.4,
+            "cmd": "dockerd"
+        },
+        {
+            "cpu": 5.1,
+            "mem": 0.6,
+            "cmd": "containerd"
+        },
+        {
+            "cpu": 4.8,
+            "mem": 0.1,
+            "cmd": "sshd"
+        }
+    ],
+    "memprocs": [
+        {
+            "cpu": 117736,
+            "mem": 0,
+            "cmd": "/opt/makak"
+        }
+    ],
+    "sites_probed_at": 1794620598,
+    "last_good_at": 1794620589,
+    "stale": false
+}

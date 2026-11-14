@@ -1,0 +1,1988 @@
+{
+    "id": "cpanel-a",
+    "type": "cpanel",
+    "checked_at": 1794620409,
+    "duration_ms": 4288,
+    "reachable": true,
+    "error": null,
+    "metrics": {
+        "hostname": "premium332.web-hosting.com",
+        "os": "",
+        "kernel": "4.18.0-553.144.1.lve.el8.x86_64",
+        "uptime": "up 13 weeks, 1 day, 2 hours, 31 minutes",
+        "uptime_raw": "20:40:12 up 92 days,  2:31,  1 user,  load average: 8.03, 7.49, 7.67",
+        "load1": 8.03,
+        "load5": 7.49,
+        "load15": 7.67,
+        "cpus": 24,
+        "load_pct": 33.5,
+        "mem_total_kb": 135094284,
+        "mem_used_kb": 35068200,
+        "mem_free_kb": 4598204,
+        "mem_pct": 26,
+        "disk_fs": "/dev/sda2",
+        "disk_size_kb": 102626232,
+        "disk_used_kb": 19388800,
+        "disk_avail_kb": 77978168,
+        "disk_pct": 20,
+        "php_cli": "PHP 8.2.35 (cli) (built: Oct 22 2026 18:49:31) (NTS)",
+        "php_cli_ver": "8.2.35",
+        "whoami": "tipmrnhl",
+        "home": "/home/tipmrnhl",
+        "procs": "",
+        "home_size_kb": 4435787216,
+        "home_used_kb": 3806645024,
+        "home_pct": 91,
+        "home_fs": "/dev/sdb1",
+        "inodes_used": 41682593,
+        "inodes_total": 139759616,
+        "cron_entries": 3
+    },
+    "units": [],
+    "containers": [],
+    "pm2": {
+        "present": true,
+        "total": 0,
+        "online": 0,
+        "stopped": 0,
+        "procs": []
+    },
+    "sites": [
+        {
+            "id": "agent.aiacademia.site",
+            "hosts": [
+                "agent.aiacademia.site"
+            ],
+            "server_names": "agent.aiacademia.site",
+            "owner": "cPanel:agent.aiacademia.site",
+            "root": "/home/tipmrnhl/public_html/agent.aiacademia.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "agent.aiacademia.site": {
+                    "status": 200,
+                    "ms": 558,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 558,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "ambitioushub.store",
+            "hosts": [
+                "ambitioushub.store"
+            ],
+            "server_names": "ambitioushub.store",
+            "owner": "cPanel:ambitioushub.store.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/ambitioushub.store",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 49,
+            "error_log": "none",
+            "tail": [],
+            "entries": 1,
+            "log_bytes": 0,
+            "http": {
+                "ambitioushub.store": {
+                    "status": 200,
+                    "ms": 14,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 49
+                }
+            },
+            "status": 200,
+            "ms": 14,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "api.xdigitex.space",
+            "hosts": [
+                "api.xdigitex.space"
+            ],
+            "server_names": "api.xdigitex.space",
+            "owner": "cPanel:api.xdigitex.space",
+            "root": "/home/tipmrnhl/api.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 192,
+            "error_log": "/home/tipmrnhl/api.xdigitex.space/error_log",
+            "tail": [
+                "  thrown in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php on line 8",
+                "[27-Sep-2026 04:40:06 UTC] PHP Fatal error:  Uncaught Error: Undefined constant \"STDIN\" in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php:8",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /home/tipmrnhl/api.xdigitex.space/bin-apply-settings.php on line 8",
+                "[11-Nov-2026 22:08:32 UTC] PHP Warning:  require(/tmp/providers/ProviderFactory.php): Failed to open stream: No such file or directory in /tmp/test_alloc.php on line 2",
+                "[11-Nov-2026 22:08:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/tmp/providers/ProviderFactory.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /tmp/test_alloc.php:2",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /tmp/test_alloc.php on line 2",
+                "[11-Nov-2026 22:08:39 UTC] PHP Warning:  require(/tmp/providers/ProviderFactory.php): Failed to open stream: No such file or directory in /tmp/test_alloc.php on line 2",
+                "[11-Nov-2026 22:08:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/tmp/providers/ProviderFactory.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /tmp/test_alloc.php:2",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /tmp/test_alloc.php on line 2"
+            ],
+            "entries": 20,
+            "log_bytes": 5180,
+            "http": {
+                "api.xdigitex.space": {
+                    "status": 404,
+                    "ms": 514,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 192
+                }
+            },
+            "status": 404,
+            "ms": 514,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "app.xdigitex.space",
+            "hosts": [
+                "app.xdigitex.space"
+            ],
+            "server_names": "app.xdigitex.space",
+            "owner": "cPanel:app.xdigitex.space",
+            "root": "/home/tipmrnhl/app.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "app.xdigitex.space": {
+                    "status": 200,
+                    "ms": 568,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 568,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "cdvrsbooster.site",
+            "hosts": [
+                "cdvrsbooster.site"
+            ],
+            "server_names": "cdvrsbooster.site",
+            "owner": "cPanel:cdvrsbooster.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/cdvrsbooster.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "cdvrsbooster.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "cheapbooster.site",
+            "hosts": [
+                "cheapbooster.site"
+            ],
+            "server_names": "cheapbooster.site",
+            "owner": "cPanel:cheapbooster.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/cheapbooster.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "/home/tipmrnhl/cheapbooster.site/error_log",
+            "tail": [
+                "#4 /home/tipmrnhl/cheapbooster.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                "#5 {main}",
+                "  thrown in /home/tipmrnhl/cheapbooster.site/system/notification-events.php on line 31",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $q in Command line code on line 3",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $db in Command line code on line 3",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Attempt to read property \"prepare\" on null in Command line code on line 3",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $q in Command line code on line 3",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Undefined variable $db in Command line code on line 3",
+                "[23-Oct-2026 20:36:19 UTC] PHP Warning:  Attempt to read property \"prepare\" on null in Command line code on line 3",
+                "[10-Nov-2026 07:49:56 Africa/Kinshasa] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and dripfeed=2' at line 1 in /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php:504",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php(504): PDO->query('SELECT * FROM o...')",
+                "#1 /home/tipmrnhl/cheapbooster.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                "#2 {main}",
+                "  thrown in /home/tipmrnhl/cheapbooster.site/GlyconSMMScript.php on line 504"
+            ],
+            "entries": 54,
+            "log_bytes": 2126,
+            "http": {
+                "cheapbooster.site": {
+                    "status": 200,
+                    "ms": 583,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 583,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "cheapestfollowerskenya.site",
+            "hosts": [
+                "cheapestfollowerskenya.site"
+            ],
+            "server_names": "cheapestfollowerskenya.site",
+            "owner": "cPanel:cheapestfollowerskenya.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/cheapestfollowerskenya.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "cheapestfollowerskenya.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "chikpizza.online",
+            "hosts": [
+                "chikpizza.online"
+            ],
+            "server_names": "chikpizza.online",
+            "owner": "cPanel:chikpizza.online.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/chikpizza.online",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "/home/tipmrnhl/chikpizza.online/error_log",
+            "tail": [
+                "[22-Jul-2026 08:46:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /opt/alt/php82/var/lib/php/session) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                "[22-Jul-2026 09:07:55 UTC] PHP Warning:  session_start(): open(/opt/alt/php82/var/lib/php/session/sess_40tc1hlu20ni33lcjnl2f53kqe, O_RDWR) failed: Disk quota exceeded (122) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                "[22-Jul-2026 09:07:55 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /opt/alt/php82/var/lib/php/session) in /home/tipmrnhl/chikpizza.online/includes/auth.php on line 6",
+                "[31-Jul-2026 15:03:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3",
+                "[31-Jul-2026 15:03:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3",
+                "[31-Jul-2026 15:03:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function require_login() in /home/tipmrnhl/chikpizza.online/checkout.php:3",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in /home/tipmrnhl/chikpizza.online/checkout.php on line 3"
+            ],
+            "entries": 21,
+            "log_bytes": 8997,
+            "http": {
+                "chikpizza.online": {
+                    "status": 200,
+                    "ms": 587,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 587,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "chikpizza.store",
+            "hosts": [
+                "chikpizza.store"
+            ],
+            "server_names": "chikpizza.store",
+            "owner": "cPanel:chikpizza.store.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/chikpizza.store",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "chikpizza.store": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "clauphanieservices.site",
+            "hosts": [
+                "clauphanieservices.site"
+            ],
+            "server_names": "clauphanieservices.site",
+            "owner": "cPanel:clauphanieservices.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/clauphanieservices.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "clauphanieservices.site": {
+                    "status": 200,
+                    "ms": 562,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 562,
+            "scheme": "http",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "delivery.xdigitex.space",
+            "hosts": [
+                "delivery.xdigitex.space"
+            ],
+            "server_names": "delivery.xdigitex.space",
+            "owner": "cPanel:delivery.xdigitex.space",
+            "root": "/home/tipmrnhl/delivery.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 34,
+            "error_log": "none",
+            "tail": [],
+            "entries": 10,
+            "log_bytes": 0,
+            "http": {
+                "delivery.xdigitex.space": {
+                    "status": 200,
+                    "ms": 498,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 34
+                }
+            },
+            "status": 200,
+            "ms": 498,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "deploy.xdigitex.space",
+            "hosts": [
+                "deploy.xdigitex.space"
+            ],
+            "server_names": "deploy.xdigitex.space",
+            "owner": "cPanel:deploy.xdigitex.space",
+            "root": "/home/tipmrnhl/deploy.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 5,
+            "log_bytes": 0,
+            "http": {
+                "deploy.xdigitex.space": {
+                    "status": 502,
+                    "ms": 593,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 502,
+            "ms": 593,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "digitexsmartsolutions.com",
+            "hosts": [
+                "digitexsmartsolutions.com"
+            ],
+            "server_names": "digitexsmartsolutions.com",
+            "owner": "cPanel:digitexsmartsolutions.com.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/digitexsmartsolutions.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 147,
+            "error_log": "/home/tipmrnhl/digitexsmartsolutions.com/error_log",
+            "tail": [
+                "[11-Nov-2026 15:01:25 UTC] Digitex signup: honeypot triggered from 5.2.69.85",
+                "[11-Nov-2026 15:27:02 UTC] Digitex signup: honeypot triggered from 23.191.200.57",
+                "[11-Nov-2026 21:56:04 UTC] Digitex signup: honeypot triggered from 45.9.156.238",
+                "[11-Nov-2026 22:43:06 UTC] PHP Fatal error:  Assignments can only happen to writable values in /tmp/render_test.php on line 4",
+                "[11-Nov-2026 23:24:49 UTC] PHP Parse error:  syntax error, unexpected token \"&\" in dashboard.php on line 668",
+                "[12-Nov-2026 19:36:17 UTC] Digitex signup: honeypot triggered from 185.56.83.10",
+                "[12-Nov-2026 20:50:06 UTC] Digitex signup: honeypot triggered from 94.249.178.227",
+                "[13-Nov-2026 15:25:55 UTC] Digitex signup: honeypot triggered from 185.220.101.9",
+                "[13-Nov-2026 15:54:19 UTC] Digitex signup: honeypot triggered from 178.17.171.102",
+                "[13-Nov-2026 15:54:23 UTC] Digitex signup: honeypot triggered from 178.17.171.102",
+                "[13-Nov-2026 18:53:21 UTC] Digitex signup: honeypot triggered from 204.8.96.87",
+                "[13-Nov-2026 23:04:45 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                "[13-Nov-2026 23:04:50 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                "[13-Nov-2026 23:04:55 UTC] Digitex signup: honeypot triggered from 150.40.127.145",
+                "[14-Nov-2026 00:24:30 UTC] Digitex signup: honeypot triggered from 107.175.218.6"
+            ],
+            "entries": 78,
+            "log_bytes": 6800,
+            "http": {
+                "digitexsmartsolutions.com": {
+                    "status": 200,
+                    "ms": 573,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 147
+                }
+            },
+            "status": 200,
+            "ms": 573,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "don14.online",
+            "hosts": [
+                "don14.online"
+            ],
+            "server_names": "don14.online",
+            "owner": "cPanel:don14.online.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/don14.online",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "/home/tipmrnhl/don14.online/error_log",
+            "tail": [
+                "[11-Oct-2026 17:26:24 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/tipmrnhl/don14.online/config/auth.php on line 2",
+                "[13-Oct-2026 02:56:27 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/tipmrnhl/don14.online/config/auth.php on line 2",
+                "[31-Oct-2026 14:25:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' in /home/tipmrnhl/don14.online/signup_process.php:45",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/don14.online/signup_process.php(45): PDOStatement->execute()",
+                "#1 {main}",
+                "  thrown in /home/tipmrnhl/don14.online/signup_process.php on line 45",
+                "[31-Oct-2026 14:25:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' in /home/tipmrnhl/don14.online/signup_process.php:45",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/don14.online/signup_process.php(45): PDOStatement->execute()",
+                "#1 {main}",
+                "  thrown in /home/tipmrnhl/don14.online/signup_process.php on line 45"
+            ],
+            "entries": 56,
+            "log_bytes": 1226,
+            "http": {
+                "don14.online": {
+                    "status": 200,
+                    "ms": 594,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 594,
+            "scheme": "http",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "enominich.site",
+            "hosts": [
+                "enominich.site"
+            ],
+            "server_names": "enominich.site",
+            "owner": "cPanel:enominich.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/enominich.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 147,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "enominich.site": {
+                    "status": 200,
+                    "ms": 572,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 147
+                }
+            },
+            "status": 200,
+            "ms": 572,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "equatorvoiceafrica.com",
+            "hosts": [
+                "equatorvoiceafrica.com"
+            ],
+            "server_names": "equatorvoiceafrica.com",
+            "owner": "cPanel:equatorvoiceafrica.com.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/equatorvoiceafrica.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "/home/tipmrnhl/equatorvoiceafrica.com/error_log",
+            "tail": [
+                "[03-Nov-2026 15:00:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' LEFT(,80) AS value_preview FROM settings ORDER BY' at line 1 in Command line code:1",
+                "Stack trace:",
+                "#0 Command line code(1): PDO->query()",
+                "#1 {main}",
+                "  thrown in Command line code on line 1",
+                "[03-Nov-2026 15:26:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'published' in 'WHERE' in Command line code:1",
+                "Stack trace:",
+                "#0 Command line code(1): PDO->query()",
+                "#1 {main}",
+                "  thrown in Command line code on line 1"
+            ],
+            "entries": 30,
+            "log_bytes": 717,
+            "http": {
+                "equatorvoiceafrica.com": {
+                    "status": 200,
+                    "ms": 584,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 584,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "exams.chikpizza.online",
+            "hosts": [
+                "exams.chikpizza.online"
+            ],
+            "server_names": "exams.chikpizza.online",
+            "owner": "cPanel:exams.chikpizza.online",
+            "root": "/home/tipmrnhl/chikpizza.online/exams",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 12,
+            "log_bytes": 0,
+            "http": {
+                "exams.chikpizza.online": {
+                    "status": 200,
+                    "ms": 630,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 630,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "fkmbooste.site",
+            "hosts": [
+                "fkmbooste.site"
+            ],
+            "server_names": "fkmbooste.site",
+            "owner": "cPanel:fkmbooste.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/malabora.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 173,
+            "error_log": "/home/tipmrnhl/malabora.site/error_log",
+            "tail": [
+                "#2 {main}",
+                "  thrown in /home/tipmrnhl/malabora.site/GlyconSMMScript.php on line 528",
+                "[12-Nov-2026 19:37:56 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and dripfeed=2' at line 1 in /home/tipmrnhl/malabora.site/GlyconSMMScript.php:528",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/malabora.site/GlyconSMMScript.php(528): PDO->query('SELECT * FROM o...')",
+                "#1 /home/tipmrnhl/malabora.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                "#2 {main}",
+                "  thrown in /home/tipmrnhl/malabora.site/GlyconSMMScript.php on line 528",
+                "[13-Nov-2026 19:59:52 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'service_id' cannot be null in /home/tipmrnhl/malabora.site/controller/panel/neworder.php:273",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/malabora.site/controller/panel/neworder.php(273): PDOStatement->execute(Array)",
+                "#1 /home/tipmrnhl/malabora.site/GlyconSMMScript.php(197): require('/home/tipmrnhl/...')",
+                "#2 /home/tipmrnhl/malabora.site/index.php(37): require_once('/home/tipmrnhl/...')",
+                "#3 {main}",
+                "  thrown in /home/tipmrnhl/malabora.site/controller/panel/neworder.php on line 273"
+            ],
+            "entries": 54,
+            "log_bytes": 26375,
+            "http": {
+                "fkmbooste.site": {
+                    "status": 200,
+                    "ms": 658,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 173
+                }
+            },
+            "status": 200,
+            "ms": 658,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "foreverus.tipmaxstiven.site",
+            "hosts": [
+                "foreverus.tipmaxstiven.site"
+            ],
+            "server_names": "foreverus.tipmaxstiven.site",
+            "owner": "cPanel:foreverus.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/foreverus.site/public_html",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "foreverus.tipmaxstiven.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "gbs.mediaboost.site",
+            "hosts": [
+                "gbs.mediaboost.site"
+            ],
+            "server_names": "gbs.mediaboost.site",
+            "owner": "cPanel:gbs.mediaboost.site",
+            "root": "/home/tipmrnhl/gbs.mediaboost.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "gbs.mediaboost.site": {
+                    "status": 200,
+                    "ms": 548,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 548,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "gbsbusiness.site",
+            "hosts": [
+                "gbsbusiness.site"
+            ],
+            "server_names": "gbsbusiness.site",
+            "owner": "cPanel:gbsbusiness.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/gbsbusiness.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "gbsbusiness.site": {
+                    "status": 200,
+                    "ms": 585,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 585,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "gbssarl.site",
+            "hosts": [
+                "gbssarl.site"
+            ],
+            "server_names": "gbssarl.site",
+            "owner": "cPanel:gbssarl.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/gbssarl.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "gbssarl.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "gt.aiacademia.site",
+            "hosts": [
+                "gt.aiacademia.site"
+            ],
+            "server_names": "gt.aiacademia.site",
+            "owner": "cPanel:gt.aiacademia.site",
+            "root": "/home/tipmrnhl/public_html/gt.aiacademia.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "gt.aiacademia.site": {
+                    "status": 200,
+                    "ms": 566,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 566,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "hosting.aiacademia.site",
+            "hosts": [
+                "hosting.aiacademia.site"
+            ],
+            "server_names": "hosting.aiacademia.site",
+            "owner": "cPanel:hosting.aiacademia.site",
+            "root": "/home/tipmrnhl/public_html/hosting.aiacademia.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "hosting.aiacademia.site": {
+                    "status": 200,
+                    "ms": 586,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 586,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "king.aiacademia.site",
+            "hosts": [
+                "king.aiacademia.site"
+            ],
+            "server_names": "king.aiacademia.site",
+            "owner": "cPanel:king.aiacademia.site",
+            "root": "/home/tipmrnhl/public_html/king.aiacademia.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "king.aiacademia.site": {
+                    "status": 200,
+                    "ms": 634,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 634,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "legrandmalaba.com",
+            "hosts": [
+                "legrandmalaba.com"
+            ],
+            "server_names": "legrandmalaba.com",
+            "owner": "cPanel:legrandmalaba.com.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/legrandmalaba.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 1,
+            "log_bytes": 0,
+            "http": {
+                "legrandmalaba.com": {
+                    "status": 200,
+                    "ms": 369,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 369,
+            "scheme": "http",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "love.timesave.shop",
+            "hosts": [
+                "love.timesave.shop"
+            ],
+            "server_names": "love.timesave.shop",
+            "owner": "cPanel:love.timesave.shop",
+            "root": "/home/tipmrnhl/love.timesave.shop",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "love.timesave.shop": {
+                    "status": 200,
+                    "ms": 513,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 513,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "makamesco.xdigitex.space",
+            "hosts": [
+                "makamesco.xdigitex.space"
+            ],
+            "server_names": "makamesco.xdigitex.space",
+            "owner": "cPanel:makamesco.xdigitex.space",
+            "root": "/home/tipmrnhl/makamesco.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "makamesco.xdigitex.space": {
+                    "status": 200,
+                    "ms": 555,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 555,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "malabora.site",
+            "hosts": [
+                "malabora.site"
+            ],
+            "server_names": "malabora.site",
+            "owner": "cPanel:malabora.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/fkmbooste.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 147,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "malabora.site": {
+                    "status": 200,
+                    "ms": 531,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 147
+                }
+            },
+            "status": 200,
+            "ms": 531,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mbbusiness.site",
+            "hosts": [
+                "mbbusiness.site"
+            ],
+            "server_names": "mbbusiness.site",
+            "owner": "cPanel:mbbusiness.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/mbbusiness.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 170,
+            "error_log": "none",
+            "tail": [],
+            "entries": 12,
+            "log_bytes": 0,
+            "http": {
+                "mbbusiness.site": {
+                    "status": 200,
+                    "ms": 522,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 170
+                }
+            },
+            "status": 200,
+            "ms": 522,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mediaboost.site",
+            "hosts": [
+                "mediaboost.site"
+            ],
+            "server_names": "mediaboost.site",
+            "owner": "cPanel:mediaboost.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/mediaboost.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 147,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "mediaboost.site": {
+                    "status": 301,
+                    "ms": 484,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 147
+                }
+            },
+            "status": 301,
+            "ms": 484,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mkboost.site",
+            "hosts": [
+                "mkboost.site"
+            ],
+            "server_names": "mkboost.site",
+            "owner": "cPanel:mkboost.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/mkboost.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 4,
+            "log_bytes": 0,
+            "http": {
+                "mkboost.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "mmf.malabora.site",
+            "hosts": [
+                "mmf.malabora.site"
+            ],
+            "server_names": "mmf.malabora.site",
+            "owner": "cPanel:mmf.malabora.site",
+            "root": "/home/tipmrnhl/mmf.malabora.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "/home/tipmrnhl/mmf.malabora.site/error_log",
+            "tail": [
+                "[09-Jun-2026 14:36:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                "#1 {main}",
+                "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16",
+                "[09-Jun-2026 14:36:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                "#1 {main}",
+                "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16",
+                "[09-Jun-2026 14:36:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '+243822441686' for key 'phone' in /home/tipmrnhl/mmf.malabora.site/profile.php:16",
+                "Stack trace:",
+                "#0 /home/tipmrnhl/mmf.malabora.site/profile.php(16): PDOStatement->execute()",
+                "#1 {main}",
+                "  thrown in /home/tipmrnhl/mmf.malabora.site/profile.php on line 16"
+            ],
+            "entries": 30,
+            "log_bytes": 2622,
+            "http": {
+                "mmf.malabora.site": {
+                    "status": 200,
+                    "ms": 569,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 569,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "mpesa.xdigitex.space",
+            "hosts": [
+                "mpesa.xdigitex.space"
+            ],
+            "server_names": "mpesa.xdigitex.space",
+            "owner": "cPanel:mpesa.xdigitex.space",
+            "root": "/home/tipmrnhl/mpesa.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 166,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "mpesa.xdigitex.space": {
+                    "status": 200,
+                    "ms": 575,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 166
+                }
+            },
+            "status": 200,
+            "ms": 575,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "novaspack.com",
+            "hosts": [
+                "novaspack.com"
+            ],
+            "server_names": "novaspack.com",
+            "owner": "cPanel:novaspack.com.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/novaspack.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "novaspack.com": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "ogzensmm.online",
+            "hosts": [
+                "ogzensmm.online"
+            ],
+            "server_names": "ogzensmm.online",
+            "owner": "cPanel:ogzensmm.online.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/ogzensmm.online",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 59,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "ogzensmm.online": {
+                    "status": 200,
+                    "ms": 45,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 59
+                }
+            },
+            "status": 200,
+            "ms": 45,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "panel.aiacademia.site",
+            "hosts": [
+                "panel.aiacademia.site"
+            ],
+            "server_names": "panel.aiacademia.site",
+            "owner": "cPanel:panel.aiacademia.site",
+            "root": "/home/tipmrnhl/public_html/panel.aiacademia.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "panel.aiacademia.site": {
+                    "status": 200,
+                    "ms": 556,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 556,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "panel.enominich.site",
+            "hosts": [
+                "panel.enominich.site"
+            ],
+            "server_names": "panel.enominich.site",
+            "owner": "cPanel:panel.enominich.site",
+            "root": "/home/tipmrnhl/panel.enominich.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 143,
+            "error_log": "none",
+            "tail": [],
+            "entries": 1,
+            "log_bytes": 0,
+            "http": {
+                "panel.enominich.site": {
+                    "status": 200,
+                    "ms": 552,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 143
+                }
+            },
+            "status": 200,
+            "ms": 552,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "panel.mkboost.site",
+            "hosts": [
+                "panel.mkboost.site"
+            ],
+            "server_names": "panel.mkboost.site",
+            "owner": "cPanel:panel.mkboost.site",
+            "root": "/home/tipmrnhl/panel.mkboost.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "panel.mkboost.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 0,
+            "ms": 0,
+            "scheme": "",
+            "http_error": "no response",
+            "up": false
+        },
+        {
+            "id": "pay.cheapbooster.site",
+            "hosts": [
+                "pay.cheapbooster.site"
+            ],
+            "server_names": "pay.cheapbooster.site",
+            "owner": "cPanel:pay.cheapbooster.site",
+            "root": "/home/tipmrnhl/apps/paygateway/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 7,
+            "log_bytes": 0,
+            "http": {
+                "pay.cheapbooster.site": {
+                    "status": 200,
+                    "ms": 717,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 717,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "pay.xdigitex.space",
+            "hosts": [
+                "pay.xdigitex.space"
+            ],
+            "server_names": "pay.xdigitex.space",
+            "owner": "cPanel:pay.xdigitex.space",
+            "root": "/home/tipmrnhl/pay.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 7,
+            "log_bytes": 0,
+            "http": {
+                "pay.xdigitex.space": {
+                    "status": 200,
+                    "ms": 501,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 501,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "paytest.xdigitex.space",
+            "hosts": [
+                "paytest.xdigitex.space"
+            ],
+            "server_names": "paytest.xdigitex.space",
+            "owner": "cPanel:paytest.xdigitex.space",
+            "root": "/home/tipmrnhl/paytest-probe",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 2,
+            "log_bytes": 0,
+            "http": {
+                "paytest.xdigitex.space": {
+                    "status": 200,
+                    "ms": 521,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                }
+            },
+            "status": 200,
+            "ms": 521,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "pos.xdigitex.space",
+            "hosts": [
+                "pos.xdigitex.space"
+            ],
+            "server_names": "pos.xdigitex.space",
+            "owner": "cPanel:pos.xdigitex.space",
+            "root": "/home/tipmrnhl/pos.xdigitex.space/public",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 184,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "pos.xdigitex.space": {
+                    "status": 200,
+                    "ms": 562,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 184
+                }
+            },
+            "status": 200,
+            "ms": 562,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "propos.xdigitex.space",
+            "hosts": [
+                "propos.xdigitex.space"
+            ],
+            "server_names": "propos.xdigitex.space",
+            "owner": "cPanel:propos.xdigitex.space",
+            "root": "/home/tipmrnhl/propos.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "propos.xdigitex.space": {
+                    "status": 200,
+                    "ms": 539,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 200,
+            "ms": 539,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "shop.tdcgangspro.site",
+            "hosts": [
+                "shop.tdcgangspro.site"
+            ],
+            "server_names": "shop.tdcgangspro.site",
+            "owner": "cPanel:shop.tdcgangspro.site",
+            "root": "/home/tipmrnhl/shop.tdcgangspro.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 3,
+            "log_bytes": 0,
+            "http": {
+                "shop.tdcgangspro.site": {
+                    "status": 200,
+                    "ms": 468,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 468,
+            "scheme": "http",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "shop.timesave.shop",
+            "hosts": [
+                "shop.timesave.shop"
+            ],
+            "server_names": "shop.timesave.shop",
+            "owner": "cPanel:shop.timesave.shop",
+            "root": "/home/tipmrnhl/shop.timesave.shop",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 57,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "shop.timesave.shop": {
+                    "status": 200,
+                    "ms": 542,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 57
+                }
+            },
+            "status": 200,
+            "ms": 542,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "shop.xdigitex.space",
+            "hosts": [
+                "shop.xdigitex.space"
+            ],
+            "server_names": "shop.xdigitex.space",
+            "owner": "cPanel:shop.xdigitex.space",
+            "root": "/home/tipmrnhl/shop.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 102,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "shop.xdigitex.space": {
+                    "status": 200,
+                    "ms": 603,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 102
+                }
+            },
+            "status": 200,
+            "ms": 603,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "smm.enominich.site",
+            "hosts": [
+                "smm.enominich.site"
+            ],
+            "server_names": "smm.enominich.site",
+            "owner": "cPanel:smm.enominich.site",
+            "root": "/home/tipmrnhl/smm.enominich.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 142,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "smm.enominich.site": {
+                    "status": 200,
+                    "ms": 566,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 142
+                }
+            },
+            "status": 200,
+            "ms": 566,
+            "scheme": "https",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "smmlab.enominich.site",
+            "hosts": [
+                "smmlab.enominich.site"
+            ],
+            "server_names": "smmlab.enominich.site",
+            "owner": "cPanel:smmlab.enominich.site",
+            "root": "/home/tipmrnhl/smmlab.enominich.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 142,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "smmlab.enominich.site": {
+                    "status": 508,
+                    "ms": 575,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 142
+                }
+            },
+            "status": 508,
+            "ms": 575,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "social.xdigitex.space",
+            "hosts": [
+                "social.xdigitex.space"
+            ],
+            "server_names": "social.xdigitex.space",
+            "owner": "cPanel:social.xdigitex.space",
+            "root": "/home/tipmrnhl/social.xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 59,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "social.xdigitex.space": {
+                    "status": 508,
+                    "ms": 607,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 59
+                }
+            },
+            "status": 508,
+            "ms": 607,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "ssdboost.com",
+            "hosts": [
+                "ssdboost.com"
+            ],
+            "server_names": "ssdboost.com",
+            "owner": "cPanel:ssdboost.com.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/ssdboost.com",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "ssdboost.com": {
+                    "status": 508,
+                    "ms": 629,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 508,
+            "ms": 629,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "statusearn.site",
+            "hosts": [
+                "statusearn.site"
+            ],
+            "server_names": "statusearn.site",
+            "owner": "cPanel:statusearn.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/statusearn.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "/home/tipmrnhl/statusearn.site/error_log",
+            "tail": [
+                "#0 Command line code(1): implode()",
+                "#1 {main}",
+                "  thrown in Command line code on line 1",
+                "[13-Sep-2026 20:57:54 UTC] PHP Warning:  file_get_contents(bootstrap/cache/routes-v7.php): Failed to open stream: No such file or directory in Command line code on line 1",
+                "[13-Sep-2026 21:51:37 UTC] PHP Fatal error:  Uncaught Error: Undefined constant \"uri\" in Command line code:1",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in Command line code on line 1",
+                "[13-Sep-2026 22:06:50 UTC] PHP Fatal error:  Uncaught Error: Object of class Illuminate\\Database\\Query\\Builder could not be converted to string in Command line code:1",
+                "Stack trace:",
+                "#0 {main}",
+                "  thrown in Command line code on line 1",
+                "[13-Sep-2026 23:26:52 UTC] PHP Warning:  The use statement with non-compound name 'Throwable' has no effect in database/migrations/2026_09_14_120500_relax_json_check_on_withdrawals_destination.php on line 7",
+                "[14-Sep-2026 18:04:46 UTC] PHP Parse error:  syntax error, unexpected token \"\\\", expecting end of file in Command line code on line 1",
+                "[14-Sep-2026 18:16:00 UTC] PHP Parse error:  syntax error, unexpected token \"\\\", expecting end of file in Command line code on line 1"
+            ],
+            "entries": 22,
+            "log_bytes": 2988,
+            "http": {
+                "statusearn.site": {
+                    "status": 508,
+                    "ms": 591,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 508,
+            "ms": 591,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "tdccharity.org",
+            "hosts": [
+                "tdccharity.org"
+            ],
+            "server_names": "tdccharity.org",
+            "owner": "cPanel:tdccharity.org.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/tdccharity.org",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 154,
+            "error_log": "/home/tipmrnhl/tdccharity.org/error_log",
+            "tail": [
+                "[08-Sep-2026 07:44:31 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:33 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:33 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:35 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:35 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:37 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:37 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:39 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:39 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:40 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:40 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:42 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:42 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:44 UTC] PHP Warning:  include(/home/tipmrnhl/tdccharity.org/404.php): Failed to open stream: No such file or directory in /home/tipmrnhl/tdccharity.org/article.php on line 9",
+                "[08-Sep-2026 07:44:44 UTC] PHP Warning:  include(): Failed opening '/home/tipmrnhl/tdccharity.org/404.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tipmrnhl/tdccharity.org/article.php on line 9"
+            ],
+            "entries": 13,
+            "log_bytes": 55879,
+            "http": {
+                "tdccharity.org": {
+                    "status": 508,
+                    "ms": 543,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 154
+                }
+            },
+            "status": 508,
+            "ms": 543,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "tdcgangspro.site",
+            "hosts": [
+                "tdcgangspro.site"
+            ],
+            "server_names": "tdcgangspro.site",
+            "owner": "cPanel:tdcgangspro.site.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/tdcgangspro.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": null,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "tdcgangspro.site": {
+                    "status": 200,
+                    "ms": 570,
+                    "scheme": "http",
+                    "error": "",
+                    "tls_days": null
+                }
+            },
+            "status": 200,
+            "ms": 570,
+            "scheme": "http",
+            "http_error": "",
+            "up": true
+        },
+        {
+            "id": "test.mediaboost.site",
+            "hosts": [
+                "test.mediaboost.site"
+            ],
+            "server_names": "test.mediaboost.site",
+            "owner": "cPanel:test.mediaboost.site",
+            "root": "/home/tipmrnhl/test.mediaboost.site",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 98,
+            "error_log": "none",
+            "tail": [],
+            "entries": 0,
+            "log_bytes": 0,
+            "http": {
+                "test.mediaboost.site": {
+                    "status": 508,
+                    "ms": 532,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 98
+                }
+            },
+            "status": 508,
+            "ms": 532,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "timesave.shop",
+            "hosts": [
+                "timesave.shop"
+            ],
+            "server_names": "timesave.shop",
+            "owner": "cPanel:timesave.shop.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/timesave.shop",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 87,
+            "error_log": "none",
+            "tail": [],
+            "entries": 2,
+            "log_bytes": 0,
+            "http": {
+                "timesave.shop": {
+                    "status": 508,
+                    "ms": 554,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 87
+                }
+            },
+            "status": 508,
+            "ms": 554,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "aiacademia.site",
+            "hosts": [
+                "aiacademia.site",
+                "tipmaxstiven.site"
+            ],
+            "server_names": "aiacademia.site tipmaxstiven.site",
+            "owner": "cPanel:tipmaxstiven.site",
+            "root": "/home/tipmrnhl/public_html",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 187,
+            "error_log": "none",
+            "tail": [],
+            "entries": 6,
+            "log_bytes": 0,
+            "http": {
+                "aiacademia.site": {
+                    "status": 508,
+                    "ms": 540,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 187
+                },
+                "tipmaxstiven.site": {
+                    "status": 0,
+                    "ms": 0,
+                    "scheme": "",
+                    "error": "no response",
+                    "tls_days": null
+                }
+            },
+            "status": 508,
+            "ms": 540,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        },
+        {
+            "id": "xdigitex.space",
+            "hosts": [
+                "xdigitex.space"
+            ],
+            "server_names": "xdigitex.space",
+            "owner": "cPanel:xdigitex.space.tipmaxstiven.site",
+            "root": "/home/tipmrnhl/xdigitex.space",
+            "proxy": "",
+            "cert_epoch": null,
+            "cert_days": 147,
+            "error_log": "none",
+            "tail": [],
+            "entries": 6,
+            "log_bytes": 0,
+            "http": {
+                "xdigitex.space": {
+                    "status": 508,
+                    "ms": 497,
+                    "scheme": "https",
+                    "error": "",
+                    "tls_days": 147
+                }
+            },
+            "status": 508,
+            "ms": 497,
+            "scheme": "https",
+            "http_error": "",
+            "up": false
+        }
+    ],
+    "procs": [
+        {
+            "cpu": 1,
+            "mem": 0,
+            "cmd": "lsphp"
+        },
+        {
+            "cpu": 0.3,
+            "mem": 0,
+            "cmd": "lsphp"
+        },
+        {
+            "cpu": 0,
+            "mem": 0,
+            "cmd": "ssh"
+        },
+        {
+            "cpu": 0,
+            "mem": 0,
+            "cmd": "lsphp"
+        },
+        {
+            "cpu": 0,
+            "mem": 0,
+            "cmd": "lsphp"
+        },
+        {
+            "cpu": 0,
+            "mem": 0,
+            "cmd": "bash"
+        }
+    ],
+    "memprocs": [],
+    "sites_probed_at": 1794620429,
+    "last_good_at": 1794620409,
+    "stale": false
+}

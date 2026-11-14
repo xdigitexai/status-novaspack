@@ -1,0 +1,660 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/lib.php';
+
+/*
+ * ============================================================================
+ *  SITE PROBE SAFETY
+ * ============================================================================
+ *  A previous version of this dashboard executed live cron endpoints simply
+ *  by fetching them (it ran a billing cycle and stopped customer bots).
+ *
+ *  Rules enforced here, in code:
+ *    1. The ONLY HTTP method we ever send is HEAD (CURLOPT_NOBODY = true).
+ *       A GET is never constructed anywhere in this codebase.
+ *    2. The ONLY path we ever request is '/' — and even that has to be in the
+ *       allowlist below and pass path_is_forbidden().
+ *    3. No query strings, no redirects followed, no ports other than 80/443.
+ *    4. Anything matching a scheduled/destructive shape is rejected outright.
+ * ============================================================================
+ */
+
+const SITE_PROBE_ALLOWLIST = ['/', '/login', '/index.php'];
+
+const SITE_PROBE_FORBIDDEN_SUBSTRINGS = [
+    'cron_', 'cron-', '_verify', 'verify_', 'deduct', 'queue', 'worker',
+    'deploy', 'webhook', 'callback', 'mutate', 'purge', 'flush', 'send',
+    'settle', 'charge', 'bill', 'refund', 'payout', 'restart', 'delete',
+];
+
+function path_is_forbidden(string $path): bool
+{
+    $p = strtolower($path);
+    if ($p === '' || $p[0] !== '/') {
+        return true;                       // must be absolute
+    }
+    if (strpbrk($p, '?#') !== false) {
+        return true;                       // never a query string or fragment
+    }
+    if (str_contains($p, '..') || str_contains($p, '//')) {
+        return true;
+    }
+    if (str_contains($p, '/api/') || str_ends_with($p, '/api')) {
+        return true;
+    }
+    if (preg_match('~\.[a-z0-9]{1,8}$~', $p) === 1 && !in_array($p, SITE_PROBE_ALLOWLIST, true)) {
+        return true;                       // arbitrary script/asset filenames
+    }
+    foreach (SITE_PROBE_FORBIDDEN_SUBSTRINGS as $bad) {
+        if (str_contains($p, $bad)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/** The single place in this codebase where a probe URL is constructed. */
+function site_probe_url(string $scheme, string $host, string $path): string
+{
+    if (!in_array($scheme, ['http', 'https'], true)) {
+        throw new RuntimeException('scheme not allowed');
+    }
+    if (!in_array($path, SITE_PROBE_ALLOWLIST, true)) {
+        throw new RuntimeException('path not in allowlist');
+    }
+    if (path_is_forbidden($path)) {
+        throw new RuntimeException('path forbidden');
+    }
+    if (preg_match('/^[a-z0-9]([a-z0-9._-]*[a-z0-9])?$/i', $host) !== 1) {
+        throw new RuntimeException('host not allowed');
+    }
+    return $scheme . '://' . $host . $path;
+}
+
+function probe_paths(): array
+{
+    $allow = (array)(cfg('http')['allowlist'] ?? ['/']);
+    if ((bool)(cfg('http')['probe_extra'] ?? false)) {
+        return array_values(array_filter($allow, static fn($p) => !path_is_forbidden($p)));
+    }
+    return ['/'];
+}
+
+/**
+ * HEAD-only HTTP probe of a batch of hostnames, over https first then http.
+ * Returns host => ['status'=>int,'ms'=>int,'scheme'=>string,'error'=>string,'tls_days'=>?int]
+ */
+function http_probe_hosts(array $hosts): array
+{
+    $hcfg = cfg('http');
+    $ct = (int)$hcfg['connect_timeout'];
+    $to = (int)$hcfg['timeout'];
+    $conc = max(1, (int)$hcfg['concurrency']);
+
+    $res = [];
+    foreach ($hosts as $h) {
+        $res[$h] = ['status' => 0, 'ms' => 0, 'scheme' => '', 'error' => '', 'tls_days' => null];
+    }
+    if (!$hosts) {
+        return $res;
+    }
+
+    foreach (['https', 'http'] as $scheme) {
+        $todo = [];
+        foreach ($hosts as $h) {
+            if ($res[$h]['status'] === 0 && $res[$h]['scheme'] === '') {
+                $todo[] = $h;
+            }
+        }
+        if (!$todo) {
+            break;
+        }
+        foreach (array_chunk($todo, $conc) as $chunk) {
+            $batch = http_probe_chunk($chunk, $scheme, $ct, $to);
+            foreach ($batch as $h => $r) {
+                if ($r['status'] > 0) {
+                    $res[$h] = $r;
+                } elseif ($scheme === 'http') {
+                    $res[$h] = $r;     // keep the http error; https already failed
+                } elseif ($res[$h]['error'] === '') {
+                    $res[$h]['error'] = $r['error'];
+                }
+            }
+        }
+    }
+    return $res;
+}
+
+function http_probe_chunk(array $hosts, string $scheme, int $ct, int $to): array
+{
+    $out = [];
+    foreach ($hosts as $h) {
+        $out[$h] = ['status' => 0, 'ms' => 0, 'scheme' => '', 'error' => 'not attempted', 'tls_days' => null];
+    }
+    $paths = probe_paths();
+    $path = $paths[0];
+
+    $mh = curl_multi_init();
+    $handles = [];
+    foreach ($hosts as $host) {
+        try {
+            $url = site_probe_url($scheme, $host, $path);
+        } catch (Throwable $e) {
+            $out[$host]['error'] = 'blocked: ' . $e->getMessage();
+            continue;
+        }
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_NOBODY         => true,          // HEAD only — never GET
+            CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_MAXREDIRS      => 0,
+            CURLOPT_CONNECTTIMEOUT => $ct,
+            CURLOPT_TIMEOUT        => $to,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_CERTINFO       => true,
+            CURLOPT_PROTOCOLS      => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+            CURLOPT_USERAGENT      => 'NovaOpsStatus/1.0 (read-only HEAD probe)',
+            CURLOPT_HTTPHEADER     => ['Cache-Control: no-cache'],
+        ]);
+        $handles[$host] = $ch;
+        curl_multi_add_handle($mh, $ch);
+    }
+    if (!$handles) {
+        curl_multi_close($mh);
+        return $out;
+    }
+
+    $active = null;
+    do {
+        $mrc = curl_multi_exec($mh, $active);
+        if ($active) {
+            curl_multi_select($mh, 0.25);
+        }
+    } while ($active && $mrc === CURLM_OK);
+
+    foreach ($handles as $host => $ch) {
+        $code = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+        $ms = (int)round(((float)curl_getinfo($ch, CURLINFO_TOTAL_TIME)) * 1000);
+        if ($code > 0) {
+            $out[$host]['status'] = $code;
+            $out[$host]['ms'] = $ms;
+            $out[$host]['scheme'] = $scheme;
+            $out[$host]['error'] = '';
+            if ($scheme === 'https') {
+                $out[$host]['tls_days'] = tls_days_from_handle($ch);
+            }
+        } else {
+            $err = curl_error($ch);
+            $out[$host]['error'] = $err !== '' ? $err : 'no response';
+        }
+        curl_multi_remove_handle($mh, $ch);
+        curl_close($ch);
+    }
+    curl_multi_close($mh);
+    return $out;
+}
+
+function tls_days_from_handle($ch): ?int
+{
+    $ci = curl_getinfo($ch, CURLINFO_CERTINFO);
+    if (!is_array($ci)) {
+        return null;
+    }
+    foreach ($ci as $cert) {
+        if (!is_array($cert)) {
+            continue;
+        }
+        foreach ($cert as $k => $v) {
+            if (strcasecmp((string)$k, 'Expire date') === 0) {
+                $ts = strtotime((string)$v);
+                if ($ts) {
+                    return (int)floor(($ts - time()) / 86400);
+                }
+            }
+        }
+    }
+    return null;
+}
+
+/* ------------------------------------------------------------------------- */
+
+function parse_probe_output(string $raw): array
+{
+    $d = [
+        'kv' => [], 'units' => [], 'procs' => [], 'memprocs' => [],
+        'containers' => [], 'pm2_raw' => '', 'sites' => [], 'logs' => [],
+    ];
+    $section = null;
+    $current = null;
+    foreach (preg_split('/\r\n|\n/', $raw) ?: [] as $line) {
+        if ($line === '') {
+            continue;
+        }
+        if (str_starts_with($line, '@@K ')) {
+            $p = explode('=', substr($line, 4), 2);
+            if (count($p) === 2) {
+                $d['kv'][$p[0]] = $p[1];
+            }
+            continue;
+        }
+        if (str_starts_with($line, '@@U ')) {
+            $p = preg_split('/\s+/', substr($line, 4));
+            if (count($p) >= 2) {
+                $d['units'][$p[0]] = $p[1];
+            }
+            continue;
+        }
+        if (preg_match('/^@@([PMSLJC])\s+(begin|end)$/', $line, $m)) {
+            $section = $m[2] === 'begin' ? $m[1] : null;
+            continue;
+        }
+        if (preg_match('/^@@([J])\s+(\S+)$/', $line, $m)) {
+            $section = 'J:' . $m[2];
+            continue;
+        }
+        if (preg_match('/^@@E\s+(\S+)$/', $line, $m)) {
+            $section = null;
+            continue;
+        }
+        if (str_starts_with($line, '@@S1' . "\t")) {
+            // VPS: name <TAB> server_names <TAB> root <TAB> proxy <TAB> cert_end
+            // cPanel: domain <TAB> docroot <TAB> userdata-file
+            $p = explode("\t", $line);
+            if (count($p) >= 4) {
+                $d['sites'][] = [
+                    'file' => $p[1], 'server_names' => trim($p[2]),
+                    'root' => trim($p[3] ?? ''), 'proxy' => trim($p[4] ?? ''),
+                    'cert_end' => trim($p[5] ?? ''),
+                ];
+            }
+            continue;
+        }
+        if (str_starts_with($line, '@@L1' . "\t")) {
+            // docroot <TAB> error_log_path <TAB> entries <TAB> bytes <TAB> primary name
+            $p = explode("\t", $line);
+            if (count($p) >= 6) {
+                $d['logs'][$p[1]] = [
+                    'root' => $p[1], 'error_log' => $p[2], 'entries' => (int)$p[3],
+                    'log_bytes' => (int)$p[4], 'domain' => $p[5], 'tail' => [],
+                ];
+            }
+            continue;
+        }
+        if (preg_match('/^@@LT\s+(\S+)\s+(begin|end)$/', $line, $m)) {
+            $current = ($m[2] === 'begin') ? $m[1] : null;
+            continue;
+        }
+        if ($current !== null) {
+            if (isset($d['logs'][$current])) {
+                $d['logs'][$current]['tail'][] = $line;
+            }
+            continue;
+        }
+        switch ($section) {
+            case 'P':
+                $d['procs'][] = $line;
+                break;
+            case 'M':
+                $d['memprocs'][] = $line;
+                break;
+            case 'C':
+                $d['containers'][] = $line;
+                break;
+            case 'J:pm2':
+                $d['pm2_raw'] .= $line;
+                break;
+        }
+    }
+    return $d;
+}
+
+function parse_pm2(string $raw): array
+{
+    $out = ['present' => true, 'total' => 0, 'online' => 0, 'stopped' => 0, 'procs' => []];
+    $s = strpos($raw, '[');
+    $e = strrpos($raw, ']');
+    if ($s === false || $e === false || $e < $s) {
+        return $out;
+    }
+    $j = json_decode(substr($raw, $s, $e - $s + 1), true);
+    if (!is_array($j)) {
+        return $out;
+    }
+    foreach ($j as $p) {
+        $status = (string)($p['pm2_env']['status'] ?? 'unknown');
+        $out['procs'][] = ['name' => (string)($p['name'] ?? '?'), 'status' => $status];
+        $out['total']++;
+        if ($status === 'online') {
+            $out['online']++;
+        } else {
+            $out['stopped']++;
+        }
+    }
+    return $out;
+}
+
+function build_metrics(array $d): array
+{
+    $kv = $d['kv'];
+    $load = array_map('floatval', array_pad(explode(' ', trim($kv['load'] ?? '')), 3, 0));
+    $cpus = max(1, (int)($kv['cpus'] ?? 1));
+    $total = (int)($kv['memtotal_kb'] ?? 0);
+    $avail = (int)($kv['memavail_kb'] ?? 0);
+    $used = max(0, $total - $avail);
+    $m = [
+        'hostname'   => $kv['hostname'] ?? '',
+        'os'         => $kv['os'] ?? '',
+        'kernel'     => $kv['kernel'] ?? '',
+        'uptime'     => $kv['uptime'] ?? '',
+        'uptime_raw' => $kv['uptime_raw'] ?? '',
+        'load1'      => $load[0], 'load5' => $load[1], 'load15' => $load[2],
+        'cpus'       => $cpus,
+        'load_pct'   => $cpus > 0 ? round($load[0] / $cpus * 100, 1) : null,
+        'mem_total_kb' => $total, 'mem_used_kb' => $used, 'mem_free_kb' => (int)($kv['memfree_kb'] ?? 0),
+        'mem_pct'    => $total > 0 ? round($used / $total * 100, 1) : null,
+        'disk_fs'    => $kv['disk_fs'] ?? '',
+        'disk_size_kb' => (int)($kv['disk_size_kb'] ?? 0),
+        'disk_used_kb' => (int)($kv['disk_used_kb'] ?? 0),
+        'disk_avail_kb' => (int)($kv['disk_avail_kb'] ?? 0),
+        'disk_pct'   => (float)rtrim((string)($kv['disk_pct'] ?? ''), '%'),
+        'php_cli'    => $kv['php_cli'] ?? '',
+        'php_cli_ver' => $kv['php_cli_ver'] ?? '',
+        'whoami'     => $kv['whoami'] ?? '',
+        'home'       => $kv['home'] ?? '',
+        'procs'      => $kv['procs'] ?? '',
+    ];
+    if (isset($kv['home_size_kb'])) {
+        $m['home_size_kb'] = (int)$kv['home_size_kb'];
+        $m['home_used_kb'] = (int)$kv['home_used_kb'];
+        $m['home_pct'] = (float)rtrim((string)($kv['home_pct'] ?? ''), '%');
+        $m['home_fs'] = $kv['home_fs'] ?? '';
+    }
+    if (isset($kv['inodes_total'])) {
+        $m['inodes_used'] = (int)$kv['inodes_used'];
+        $m['inodes_total'] = (int)$kv['inodes_total'];
+    }
+    if (isset($kv['queue_pending'])) {
+        $m['queue_pending'] = $kv['queue_pending'];
+        $m['queue_failed'] = $kv['queue_failed'] ?? 'n/a';
+        $m['queue_inflight'] = $kv['queue_inflight'] ?? 'n/a';
+        $m['queue_note'] = $kv['queue_note'] ?? '';
+    }
+    if (isset($kv['ptero_present'])) {
+        $m['ptero_present'] = (int)$kv['ptero_present'];
+    }
+    if (isset($kv['docker_present'])) {
+        $m['docker_present'] = (int)$kv['docker_present'];
+        $m['docker_running'] = (int)($kv['docker_running'] ?? 0);
+        $m['docker_total'] = (int)($kv['docker_total'] ?? 0);
+        $m['docker_unhealthy'] = (int)($kv['docker_unhealthy'] ?? 0);
+        $m['docker_stopped'] = max(0, $m['docker_total'] - $m['docker_running']);
+    }
+    if (isset($kv['pm2_present'])) {
+        $m['pm2_present'] = (int)$kv['pm2_present'];
+    }
+    if (isset($kv['cron_entries'])) {
+        $m['cron_entries'] = (int)$kv['cron_entries'];
+    }
+    return $m;
+}
+
+function parse_procs(array $lines): array
+{
+    $out = [];
+    foreach ($lines as $l) {
+        $p = preg_split('/\s+/', trim($l), 3);
+        if (count($p) === 3) {
+            $out[] = ['cpu' => (float)$p[0], 'mem' => (float)$p[1], 'cmd' => trim($p[2])];
+        }
+    }
+    return $out;
+}
+
+function parse_containers(array $lines): array
+{
+    $out = [];
+    foreach ($lines as $l) {
+        $p = explode("\t", $l);
+        if (count($p) < 3) {
+            continue;
+        }
+        $out[] = [
+            'name' => substr((string)$p[0], 0, 12),
+            'state' => strtolower(trim((string)$p[1])),
+            'status' => trim((string)$p[2]),
+            'image' => trim((string)($p[3] ?? '')),
+        ];
+    }
+    return $out;
+}
+
+function sites_from_vps(array $d): array
+{
+    $sites = [];
+    foreach ($d['sites'] as $s) {
+        $names = preg_split('/\s+/', trim((string)$s['server_names'])) ?: [];
+        $names = array_values(array_filter($names, static function ($n) {
+            $n = trim($n);
+            return $n !== '' && $n !== '_' && !preg_match('/^\d+\.\d+\.\d+\.\d+$/', $n) && !str_contains($n, '$');
+        }));
+        if (!$names) {
+            continue;
+        }
+        $cert_ts = null;
+        if (!empty($s['cert_end'])) {
+            $ts = strtotime((string)$s['cert_end']);
+            if ($ts) {
+                $cert_ts = $ts;
+            }
+        }
+        $sites[] = [
+            'id'          => $names[0],
+            'hosts'       => $names,
+            'server_names' => implode(' ', $names),
+            'owner'       => 'nginx:' . $s['file'],
+            'root'        => (string)$s['root'],
+            'proxy'       => (string)$s['proxy'],
+            'cert_epoch'  => $cert_ts,
+            'cert_days'   => $cert_ts ? (int)floor(($cert_ts - time()) / 86400) : null,
+            'error_log'   => '',
+            'tail'        => [],
+            'entries'     => null,
+        ];
+    }
+    return $sites;
+}
+
+/**
+ * cPanel stores the name it answers to as `servername` and the real public
+ * domains in `serveralias`. On addon domains `servername` is often an internal
+ * alias such as "shop.example.tld.hostingco.tld" which does not resolve, while
+ * the alias list carries "shop.example.tld". So: take both, drop mail./ftp./
+ * cpanel./www. duplicates, and drop an alias that is just "<other>.<suffix>"
+ * when <other> is already in the list.
+ */
+function cpanel_site_candidates(string $names): array
+{
+    $tokens = preg_split('/\s+/', trim($names)) ?: [];
+    $cands = [];
+    foreach ($tokens as $t) {
+        $t = strtolower(trim($t));
+        if ($t === '' || $t === '.' || !str_contains($t, '.')) {
+            continue;
+        }
+        if (preg_match('/^(mail|ftp|cpanel|webmail|webdisk)\./', $t) === 1) {
+            continue;
+        }
+        if (str_starts_with($t, 'www.')) {
+            continue;   // the bare form is in the list too
+        }
+        if (preg_match('/^[a-z0-9]([a-z0-9._-]*[a-z0-9])?$/', $t) !== 1) {
+            continue;
+        }
+        $cands[$t] = true;
+    }
+    $cands = array_keys($cands);
+    $keep = [];
+    foreach ($cands as $c) {
+        $drop = false;
+        foreach ($cands as $o) {
+            if ($o !== $c && str_starts_with($c, $o . '.')) {
+                $drop = true;   // c is an alias of o
+                break;
+            }
+        }
+        if (!$drop) {
+            $keep[] = $c;
+        }
+    }
+    usort($keep, static fn($a, $b) => strlen((string)$a) <=> strlen((string)$b));
+    return $keep;
+}
+
+function sites_from_cpanel(array $d): array
+{
+    $logsByRoot = [];
+    foreach ($d['logs'] as $log) {
+        $logsByRoot[(string)$log['root']] = $log;
+    }
+    $sites = [];
+    $seenRoots = [];
+    foreach ($d['sites'] as $s) {
+        $cands = cpanel_site_candidates((string)$s['server_names']);
+        if (!$cands) {
+            continue;
+        }
+        $root = (string)$s['root'];
+        $seenRoots[$root] = true;
+        $log = $logsByRoot[$root] ?? null;
+        $sites[] = [
+            'id'        => $cands[0],
+            'hosts'     => $cands,
+            'server_names' => implode(' ', $cands),
+            'owner'     => 'cPanel:' . (string)$s['file'],
+            'root'      => $root,
+            'proxy'     => '',
+            'cert_epoch' => null,
+            'cert_days' => null,
+            'error_log' => is_array($log) ? (string)$log['error_log'] : 'none',
+            'tail'      => is_array($log) ? array_slice((array)$log['tail'], -15) : [],
+            'entries'   => is_array($log) ? (int)$log['entries'] : null,
+            'log_bytes' => is_array($log) ? (int)$log['log_bytes'] : 0,
+        ];
+    }
+    // docroots that carry an error log but were not in userdata
+    foreach ($d['logs'] as $log) {
+        $root = (string)$log['root'];
+        if (isset($seenRoots[$root]) || empty($log['tail'])) {
+            continue;
+        }
+        $name = (string)$log['domain'] !== '' ? (string)$log['domain'] : basename($root);
+        $sites[] = [
+            'id' => $name, 'hosts' => [$name], 'server_names' => $name,
+            'owner' => 'cPanel:log-only', 'root' => $root, 'proxy' => '',
+            'cert_epoch' => null, 'cert_days' => null,
+            'error_log' => (string)$log['error_log'], 'tail' => array_slice((array)$log['tail'], -15),
+            'entries' => (int)$log['entries'], 'log_bytes' => (int)$log['log_bytes'],
+        ];
+    }
+    return $sites;
+}
+
+/** Probe one target. Exactly one SSH session (or zero, for the local target). */
+function probe_target(string $id): array
+{
+    $t = target_conf($id);
+    if ($t === null) {
+        throw new InvalidArgumentException('unknown target');
+    }
+    $scriptFile = cfg('scripts') . '/' . ($t['type'] === 'vps' ? 'vps.sh' : 'cpanel.sh');
+    $script = (string)@file_get_contents($scriptFile);
+
+    $rec = [
+        'id' => $id, 'type' => $t['type'], 'checked_at' => time(), 'duration_ms' => 0,
+        'reachable' => false, 'error' => null, 'metrics' => [], 'units' => [],
+        'containers' => [], 'pm2' => [], 'sites' => [], 'procs' => [], 'memprocs' => [],
+        'sites_probed_at' => 0,
+    ];
+
+    if ($script === '') {
+        $rec['error'] = 'probe script missing';
+        return $rec;
+    }
+
+    $started = microtime(true);
+    if ($t['access'] === 'local') {
+        [$code, $out, $err] = proc_run(['/bin/bash', '-s'], $script, (int)cfg('budget')['local']);
+    } else {
+        [$code, $out, $err] = proc_run(ssh_argv($t), $script, (int)cfg('budget')['ssh']);
+    }
+    $rec['duration_ms'] = (int)round((microtime(true) - $started) * 1000);
+
+    if (!str_contains($out, '@@K hostname=')) {
+        $msg = trim($err) !== '' ? trim($err) : 'no data returned';
+        if ($code === -2) {
+            $msg = 'probe timed out after ' . (int)cfg('budget')['ssh'] . 's';
+        }
+        // ssh warns with a banner of '@@@@...' lines; surface the informative line.
+        $picked = '';
+        foreach (preg_split('/\r\n|\n/', $msg) ?: [] as $l) {
+            $l = trim($l);
+            if ($l === '' || str_starts_with($l, '@')) {
+                continue;
+            }
+            $picked = $l;
+            break;
+        }
+        if ($picked === '') {
+            $picked = 'no data returned';
+        }
+        $rec['error'] = sanitize_field($picked, 160);
+        return $rec;
+    }
+
+    $d = parse_probe_output($out);
+    $rec['reachable'] = true;
+    $rec['metrics'] = build_metrics($d);
+    $rec['units'] = $d['units'];
+    $rec['containers'] = parse_containers($d['containers']);
+    $rec['pm2'] = parse_pm2($d['pm2_raw']);
+    $rec['procs'] = parse_procs($d['procs']);
+    $rec['memprocs'] = parse_procs($d['memprocs']);
+    $rec['sites'] = $t['type'] === 'vps' ? sites_from_vps($d) : sites_from_cpanel($d);
+
+    // --- one HEAD per discovered hostname, batched --------------------------
+    $hosts = [];
+    foreach ($rec['sites'] as $s) {
+        foreach ($s['hosts'] as $h) {
+            $hosts[$h] = true;
+        }
+    }
+    $hosts = array_keys($hosts);
+    if ($hosts) {
+        $probe = http_probe_hosts($hosts);
+        foreach ($rec['sites'] as &$s) {
+            $s['http'] = [];
+            $best = null;
+            foreach ($s['hosts'] as $h) {
+                $r = $probe[$h] ?? ['status' => 0, 'ms' => 0, 'scheme' => '', 'error' => 'not probed', 'tls_days' => null];
+                $s['http'][$h] = $r;
+                if ($best === null || ($r['status'] > 0 && $best['status'] === 0)) {
+                    $best = $r;
+                }
+                if ($s['cert_days'] === null && $r['tls_days'] !== null) {
+                    $s['cert_days'] = $r['tls_days'];
+                }
+            }
+            $s['status'] = $best['status'] ?? 0;
+            $s['ms'] = $best['ms'] ?? 0;
+            $s['scheme'] = $best['scheme'] ?? '';
+            $s['http_error'] = $best['error'] ?? '';
+            $s['up'] = ($s['status'] >= 200 && $s['status'] < 400);
+        }
+        unset($s);
+        $rec['sites_probed_at'] = time();
+    }
+
+    return $rec;
+}
